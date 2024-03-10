@@ -1,3 +1,5 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
 jane_personal_account_member: {
   user: "jane",
   account: "janes_personal_account"
