@@ -50,7 +50,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 # Irelia depends on the following gems
-gem "irelia", git: "git@github.com:kiqr/irelia-core.git", branch: "main"
+gem "irelia", git: "https://github.com/kiqr/irelia-core.git", branch: "main"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
