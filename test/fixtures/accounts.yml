@@ -3,14 +3,8 @@
 # This model initially had no columns defined. If you add columns to the
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
-#
-john: {
-  email: "john.doe@example.com"
+
+janes_personal_account: {
+  name: "Jane Doe",
+  public_uid: "uau8s9"
 }
-# column: value
-#
-jane: {
-  email: "jane.doe@example.com",
-  personal_account: janes_personal_account
-}
-# column: value
