@@ -2,6 +2,6 @@
 
 class DashboardController < ApplicationController
   def show
-    breadcrumb "Dashboard", root_path
+    breadcrumb "Dashboard", dashboard_path
   end
 end

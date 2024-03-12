@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # Define the routes for the application. Routes inside the block will be prefixed with /team/<team_id> if
   # the user is signed in to a team account.
   teamable do
-    root "dashboard#show"
+    get :dashboard, to: "dashboard#show"
   end
+
+  root "welcome#show"
 end
