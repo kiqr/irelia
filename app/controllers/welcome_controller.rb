@@ -3,5 +3,6 @@
 class WelcomeController < ApplicationController
   include Irelia::Controllers::Public
 
-  def show; end
+  def show
+  end
 end
