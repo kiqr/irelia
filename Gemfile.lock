@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/kiqr/irelia-core.git
-  revision: b47819f058f3c90b4c6f67c254841182adb94ae5
+  revision: 8ac3707e9949fb2e8100748d952c048322cdc52c
   branch: main
   specs:
     irelia (0.1.0)
@@ -14,6 +14,15 @@ GIT
       teamable (~> 0.2.0)
       view_component (~> 3.11)
       view_component-contrib (~> 0.2.2)
+
+GIT
+  remote: https://github.com/kiqr/teamable.git
+  revision: 9ac9fb1697b9465e8e28f1f3e754d3ec8b0b01b7
+  branch: main
+  specs:
+    teamable (0.2.1)
+      dry-configurable (~> 1.1.0)
+      public_uid (~> 2.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -328,9 +337,6 @@ GEM
       railties (>= 6.0.0)
     tailwindcss-rails (2.3.0-x86_64-linux)
       railties (>= 6.0.0)
-    teamable (0.2.0)
-      dry-configurable (~> 1.1.0)
-      public_uid (~> 2.2.0)
     thor (1.3.1)
     timeout (0.4.1)
     turbo-rails (2.0.5)
@@ -390,6 +396,7 @@ DEPENDENCIES
   standard
   stimulus-rails
   tailwindcss-rails
+  teamable!
   turbo-rails
   tzinfo-data
   web-console

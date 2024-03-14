@@ -51,6 +51,7 @@ gem "bootsnap", require: false
 
 # Irelia depends on the following gems
 gem "irelia", git: "https://github.com/kiqr/irelia-core.git", branch: "main"
+gem "teamable", git: "https://github.com/kiqr/teamable.git", branch: "main"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
