@@ -10,9 +10,10 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", :as => :rails_health_check
 
-  # Define the routes for the application. Routes inside the block will be prefixed with /team/<team_id> if
+  # Define the routes for the application.
+  # Routes inside the "teamable_scope" block will be prefixed with /team/<team_id> if
   # the user is signed in to a team account.
-  teamable do
+  teamable "team", {accounts_controller: "accounts"} do
     get :dashboard, to: "dashboard#show"
   end
 
