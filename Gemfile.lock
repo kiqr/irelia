@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: https://github.com/kiqr/teamable.git
-  revision: 6c33c3b0ba1a535ab56f9b404d05eadd5d797a10
+  revision: 7a3328ea1da1f7075826fc1e47c247ec2a8ff5e3
   branch: main
   specs:
     teamable (0.2.1)
