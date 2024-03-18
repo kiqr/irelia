@@ -58,3 +58,4 @@ jobs:
           bin/rails test:prepare
           bin/rails db:test:prepare
           bin/rails test
+          bin/rails test:system

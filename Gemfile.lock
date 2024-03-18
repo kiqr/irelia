@@ -135,6 +135,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    docile (1.4.0)
     drb (2.2.1)
     dry-configurable (1.1.0)
       dry-core (~> 1.0, < 2)
@@ -297,6 +298,12 @@ GEM
     simple_form (5.3.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.4)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -391,6 +398,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   selenium-webdriver
+  simplecov
   sprockets-rails
   sqlite3 (~> 1.4)
   standard

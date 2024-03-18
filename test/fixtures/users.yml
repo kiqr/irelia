@@ -1,10 +1,6 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-john: {
-  email: "john.doe@example.com"
-}
+john: { email: "john.doe@example.com" }
 
-jane: {
-  email: "jane.doe@example.com",
-  personal_account: janes_personal_account
-}
+jane:
+  { email: "jane.doe@example.com", personal_account: janes_personal_account }
