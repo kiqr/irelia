@@ -1,7 +1,7 @@
 require "test_helper"
 
-class Kiqr::ComponentsTest < ActiveSupport::TestCase
+class IreliaTest < ActiveSupport::TestCase
   test "it has a version number" do
-    assert Kiqr::Components::VERSION
+    assert Irelia::VERSION
   end
 end

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Kiqr::Components::Button::Component < Kiqr::Components::Component
+class Irelia::Button::Component < Irelia::Component
   option :url, default: -> { nil }
   option :type, default: -> { :button }, in: [ :button, :submit, :reset ]
   option :size, default: -> { :md }, in: [ :xs, :sm, :md, :lg, :xl ]
@@ -10,20 +10,20 @@ class Kiqr::Components::Button::Component < Kiqr::Components::Component
 
   style {
     base {
-      %w[kiqr-button]
+      %w[irelia-button]
     }
 
     variants {
       color {
-        primary { %w[kiqr-button--primary] }
-        danger { %w[kiqr-button--danger] }
+        primary { %w[irelia-button--primary] }
+        danger { %w[irelia-button--danger] }
       }
 
       size {
-        xs { %w[kiqr-button--xs] }
-        sm { %w[kiqr-button--sm] }
-        lg { %w[kiqr-button--lg] }
-        xl { %w[kiqr-button--xl] }
+        xs { %w[irelia-button--xs] }
+        sm { %w[irelia-button--sm] }
+        lg { %w[irelia-button--lg] }
+        xl { %w[irelia-button--xl] }
       }
     }
   }

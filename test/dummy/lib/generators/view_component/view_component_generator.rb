@@ -58,14 +58,14 @@ class ViewComponentGenerator < Rails::Generators::NamedBase
   private
 
   def css_class_name
-    class_name.gsub("Kiqr::Components::", "kiqr-")
+    class_name.gsub("Irelia::", "irelia-")
          .gsub("::", "__")
          .gsub(/([a-z])([A-Z])/, '\1-\2')
          .downcase
   end
 
-  def class_path
-    [ "kiqr", "components" ]
+  def parent_class
+    "Irelia::Component"
   end
 
   def remove_import_from_pscss_index_file
@@ -82,7 +82,7 @@ class ViewComponentGenerator < Rails::Generators::NamedBase
   end
 
   def preview_parent_class
-    "Kiqr::Components::ComponentPreview"
+    "Irelia::ComponentPreview"
   end
 
   def initialize_signature

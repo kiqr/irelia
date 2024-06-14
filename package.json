@@ -1,12 +1,12 @@
 {
-  "name": "kiqr-components",
+  "name": "irelia",
   "version": "0.1.0",
-  "repository": "git@github.com:kiqr/kiqr-components.git",
+  "repository": "git@github.com:kiqr/irelia.git",
   "author": "Rasmus Kjellberg <2277443+kjellberg@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build:css": "postcss ./app/assets/src/stylesheets/kiqr_components.pcss -o ./app/assets/dist/kiqr_components.css"
+    "build:css": "postcss ./app/assets/src/stylesheets/main.pcss -o ./app/assets/dist/irelia.css"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

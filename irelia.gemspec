@@ -1,8 +1,8 @@
-require_relative "lib/kiqr/components/version"
+require_relative "lib/irelia/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "kiqr-components"
-  spec.version     = Kiqr::Components::VERSION
+  spec.name        = "irelia"
+  spec.version     = Irelia::VERSION
   spec.authors     = [ "Rasmus Kjellberg" ]
   spec.email       = [ "2277443+kjellberg@users.noreply.github.com" ]
   spec.homepage    = "https://kiqr.dev"
@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.license     = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "https://github.com/kiqr/kiqr"
-  spec.metadata["changelog_uri"] = "https://github.com/kiqr/kiqr"
+  spec.metadata["source_code_uri"] = "https://github.com/kiqr/irelia"
+  spec.metadata["changelog_uri"] = "https://github.com/kiqr/irelia"
 
   spec.files = Dir.chdir(File.expand_path(__dir__)) do
     Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

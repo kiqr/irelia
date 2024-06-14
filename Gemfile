@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 RAILS_VERSION = "~> 7.1"
 
-# Specify your gem's dependencies in kiqr.gemspec.
+# Specify your gem's dependencies in irelia.gemspec.
 gemspec
 
 gem "puma"
