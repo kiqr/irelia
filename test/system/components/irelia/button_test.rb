@@ -4,7 +4,7 @@ require "application_system_test_case"
 
 class Irelia::Button::ComponentSystemTest < ApplicationSystemTestCase
   def test_default_preview
-    visit("/rails/view_components/irelia/button/default")
+    visit("/rails/view_components/irelia/bustton/default")
 
     # assert_text "Hello!"
     # click_on("Click me!")

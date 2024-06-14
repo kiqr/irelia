@@ -4,6 +4,7 @@ module Irelia
 
     initializer "irelia.configure.view_components" do |app|
       config.view_component.preview_paths << Irelia::Engine.root.join("app", "components")
+      config.view_component.preview_controller = "PreviewController"
     end
 
     initializer "irelia.configure.lookbook" do |app|
