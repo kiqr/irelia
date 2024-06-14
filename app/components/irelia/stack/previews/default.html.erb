@@ -1,0 +1,5 @@
+<%= irelia_stack(direction:, justify:, align:, grow:) do |stack| %>
+  <%= stack.with_item { irelia_button { "Button" } } %>
+  <%= stack.with_item { irelia_button { "Button two" } } %>
+  <%= stack.with_item { irelia_button(color: :danger, size: :xs) { "Button three" } } %>
+<% end %>

@@ -3,7 +3,8 @@ module Irelia
     include ActionView::Helpers::UrlHelper
 
     IRELIA_COMPONENTS_HELPERS = {
-      button: "Irelia::Button::Component"
+      button: "Irelia::Button::Component",
+      stack: "Irelia::Stack::Component"
     }.freeze
 
     IRELIA_COMPONENTS_HELPERS.each do |name, component|
