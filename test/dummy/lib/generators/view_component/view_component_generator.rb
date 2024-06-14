@@ -79,10 +79,6 @@ class ViewComponentGenerator < Rails::Generators::NamedBase
        new_contents = file_contents.gsub(import_statement, "")
        File.write(file_path, new_contents)
      end
-   end
-
-  def parent_class
-    "Kiqr::Components::Component"
   end
 
   def preview_parent_class
