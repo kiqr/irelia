@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 class Irelia::Button::Preview < Irelia::ComponentPreview
-  # @label Button
+  # @label Default
   # @param color select { choices: [primary, danger] } "Button theme color"
   # @param size select { choices: [xs, sm, md, lg, xl] } "Size of the button"
-  def default_button(color: :primary, size: :md)
+  def default(color: :primary, size: :md)
     irelia_button(color:, size:) { "Default button" }
   end
 
