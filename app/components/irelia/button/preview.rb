@@ -12,17 +12,17 @@ class Irelia::Button::Preview < Irelia::ComponentPreview
 
   # @label Primary button (default)
   def primary_color
-    irelia_button { "Primary button" }
+    irelia_button { "Button" }
   end
 
   # @label Secondary button
   def secondary_color
-    irelia_button(color: :secondary) { "Secondary button" }
+    irelia_button(color: :secondary) { "Button" }
   end
 
   # @label Danger button
   def danger_color
-    irelia_button(color: :danger) { "Danger button" }
+    irelia_button(color: :danger) { "Button" }
   end
 
   # @!endgroup
@@ -31,43 +31,27 @@ class Irelia::Button::Preview < Irelia::ComponentPreview
 
   # @label Extra small
   def sizes_xs
-    # irelia_button(size: :xs) { "Example button" }
-    render_with_template(
-      template: "irelia/button/previews/all_colors",
-      locals: { size: :xs },
-    )
+    irelia_button(size: :xs) { "Button" }
   end
 
   # @label Small
   def sm_size
-    render_with_template(
-      template: "irelia/button/previews/all_colors",
-      locals: { size: :sm },
-    )
+    irelia_button(size: :sm) { "Button" }
   end
 
   # @label Medium (default)
   def default_size
-    render_with_template(
-      template: "irelia/button/previews/all_colors",
-      locals: { size: :md },
-    )
+    irelia_button(size: :md) { "Button" }
   end
 
   # @label Large
   def lg_size
-    render_with_template(
-      template: "irelia/button/previews/all_colors",
-      locals: { size: :lg },
-    )
+    irelia_button(size: :lg) { "Button" }
   end
 
   # @label Extra large
   def xl_size
-    render_with_template(
-      template: "irelia/button/previews/all_colors",
-      locals: { size: :xl },
-    )
+    irelia_button(size: :xl) { "Button" }
   end
 
   # @!endgroup

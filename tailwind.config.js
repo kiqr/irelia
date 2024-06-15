@@ -12,6 +12,8 @@ module.exports = {
       colors: {
         "irelia-primary": "var(--irelia-colors-primary)",
         "irelia-primary-hover": "var(--irelia-colors-primary-hover)",
+        "irelia-gray": "var(--irelia-colors-gray)",
+        "irelia-gray-hover": "var(--irelia-colors-gray-hover)",
         "irelia-danger": "var(--irelia-colors-danger)",
         "irelia-danger-hover": "var(--irelia-colors-danger-hover)",
       },
