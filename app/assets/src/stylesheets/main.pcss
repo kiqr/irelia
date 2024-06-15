@@ -6,7 +6,11 @@
 
 @layer base {
   :root {
-    --navbar-height: 70px;
+    --irelia-navbar-height: 70px;
+    --irelia-colors-background: theme("colors.neutral.50");
+    --irelia-colors-surface: theme("colors.white");
+    --irelia-colors-text: theme("colors.zinc.500");
+    --irelia-colors-border: theme("colors.neutral.200");
     --irelia-colors-primary: theme("colors.zinc.800");
     --irelia-colors-primary-hover: theme("colors.zinc.700");
     --irelia-colors-gray: theme("colors.neutral.100");
@@ -16,7 +20,7 @@
   }
 
   body {
-    @apply bg-[var(--color-background)] font-sans text-[var(--color-text)] antialiased;
+    @apply bg-[var(--irelia-colors-background)] font-sans text-[var(--irelia-colors-text)] antialiased;
   }
 
   .invalid .input-box {

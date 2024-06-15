@@ -10,6 +10,10 @@ module.exports = {
         sans: ["Poppins"],
       },
       colors: {
+        "irelia-border": "var(--irelia-colors-border)",
+        "irelia-surface": "var(--irelia-colors-surface)",
+        "irelia-background": "var(--irelia-colors-background)",
+        "irelia-text": "var(--irelia-colors-text)",
         "irelia-primary": "var(--irelia-colors-primary)",
         "irelia-primary-hover": "var(--irelia-colors-primary-hover)",
         "irelia-gray": "var(--irelia-colors-gray)",

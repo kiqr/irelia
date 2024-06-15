@@ -58,7 +58,7 @@ class Irelia::Button::Preview < Irelia::ComponentPreview
 
   # @label Link
   # Pass a URL to the button to render an anchor tag instead of a button.
-  def as_link(color: :default, size: :md)
+  def link(color: :default, size: :md)
     irelia_button(url: "#") { "Link button" }
   end
 end

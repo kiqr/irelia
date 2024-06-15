@@ -4,7 +4,8 @@ module Irelia
 
     IRELIA_COMPONENTS_HELPERS = {
       button: "Irelia::Button::Component",
-      stack: "Irelia::Stack::Component"
+      stack: "Irelia::Stack::Component",
+      navbar: "Irelia::Navbar::Component",
     }.freeze
 
     IRELIA_COMPONENTS_HELPERS.each do |name, component|
