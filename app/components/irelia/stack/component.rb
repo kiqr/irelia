@@ -6,8 +6,6 @@ class Irelia::Stack::Component < Irelia::Component
   option :align, default: -> { :baseline }, in: %i[flex_start center flex_end baseline stretch]
   option :grow, default: -> { false }, in: [ true, false ]
 
-  renders_many :items, Irelia::Stack::Item::Component
-
   style {
     base {
       %w[irelia-stack]
