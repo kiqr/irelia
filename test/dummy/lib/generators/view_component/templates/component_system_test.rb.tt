@@ -5,6 +5,6 @@ require "application_system_test_case"
 class <%= class_name %>::ComponentSystemTest < ApplicationSystemTestCase
   def test_default_preview
     visit("/rails/view_components/<%= File.join(class_path, file_name) %>/default")
-    assert_selector "div.<%= css_class_name %>"
+    assert_selector "div.<%= css_class_name %>.<%= css_class_name %>--default"
   end
 end

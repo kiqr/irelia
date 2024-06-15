@@ -1,4 +1,7 @@
 @layer components {
   .<%= css_class_name %> {
   }
+
+  .<%= css_class_name %>--default {
+  }
 }
