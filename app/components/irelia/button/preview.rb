@@ -2,7 +2,7 @@
 
 class Irelia::Button::Preview < Irelia::ComponentPreview
   # @label Default
-  # @param color select { choices: [primary, danger] } "Button theme color"
+  # @param color select { choices: [primary, secondary, danger] } "Button theme color"
   # @param size select { choices: [xs, sm, md, lg, xl] } "Size of the button"
   def default(color: :primary, size: :md)
     irelia_button(color:, size:) { "Default button" }
@@ -10,12 +10,17 @@ class Irelia::Button::Preview < Irelia::ComponentPreview
 
   # @!group Colors
 
-  # @label Primary
+  # @label Primary button (default)
   def primary_color
     irelia_button { "Primary button" }
   end
 
-  # @label Danger
+  # @label Secondary button
+  def secondary_color
+    irelia_button(color: :secondary) { "Secondary button" }
+  end
+
+  # @label Danger button
   def danger_color
     irelia_button(color: :danger) { "Danger button" }
   end
@@ -25,28 +30,44 @@ class Irelia::Button::Preview < Irelia::ComponentPreview
   # @!group Sizes
 
   # @label Extra small
-  def xs_size
-    irelia_button(size: :xs) { "Example button" }
+  def sizes_xs
+    # irelia_button(size: :xs) { "Example button" }
+    render_with_template(
+      template: "irelia/button/previews/all_colors",
+      locals: { size: :xs },
+    )
   end
 
   # @label Small
   def sm_size
-    irelia_button(size: :sm) { "Example button" }
+    render_with_template(
+      template: "irelia/button/previews/all_colors",
+      locals: { size: :sm },
+    )
   end
 
   # @label Medium (default)
   def default_size
-    irelia_button { "Example button" }
+    render_with_template(
+      template: "irelia/button/previews/all_colors",
+      locals: { size: :md },
+    )
   end
 
   # @label Large
-  def lg
-    irelia_button(size: :lg) { "Example button" }
+  def lg_size
+    render_with_template(
+      template: "irelia/button/previews/all_colors",
+      locals: { size: :lg },
+    )
   end
 
   # @label Extra large
-  def lg
-    irelia_button(size: :xl) { "Example button" }
+  def xl_size
+    render_with_template(
+      template: "irelia/button/previews/all_colors",
+      locals: { size: :xl },
+    )
   end
 
   # @!endgroup

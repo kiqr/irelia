@@ -1,29 +1,37 @@
 @layer components {
   .irelia-button {
-    @apply inline-flex justify-center items-center gap-x-2 cursor-pointer rounded px-5 py-2 font-bold no-underline;
+    @apply inline-flex justify-center items-center gap-x-2 cursor-pointer rounded font-bold no-underline transition;
   }
 
   .irelia-button--primary {
-    @apply bg-button text-white;
+    @apply bg-irelia-primary hover:bg-irelia-primary-hover text-white;
+  }
+
+  .irelia-button--secondary {
+    @apply bg-white hover:bg-neutral-100 border border-neutral-300 text-neutral-500;
   }
 
   .irelia-button--danger {
-    @apply bg-red-600 text-white;
+    @apply bg-irelia-danger hover:bg-irelia-danger-hover text-white;
   }
 
   .irelia-button--xs {
-    @apply px-2 py-1 text-xs;
+    @apply px-3 py-1 text-xs; /* Reduced padding for XS */
   }
 
   .irelia-button--sm {
-    @apply px-3 py-1 text-sm;
+    @apply px-4 py-1.5 text-sm; /* Adjusted padding for SM */
+  }
+
+  .irelia-button--md {
+    @apply px-5 py-2 text-base; /* Slightly reduced padding for MD */
   }
 
   .irelia-button--lg {
-    @apply px-6 py-3 text-lg;
+    @apply px-7 py-2.5 text-lg; /* Reduced padding for LG */
   }
 
   .irelia-button--xl {
-    @apply px-8 py-4 text-xl;
+    @apply px-8 py-3 text-xl; /* Adjusted padding for XL */
   }
 }
