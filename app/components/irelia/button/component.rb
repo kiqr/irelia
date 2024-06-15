@@ -5,7 +5,6 @@ class Irelia::Button::Component < Irelia::Component
   option :type, default: -> { :button }, in: [ :button, :submit, :reset ]
   option :size, default: -> { :md }, in: [ :xs, :sm, :md, :lg, :xl ]
   option :color, default: proc { :primary }, in: %i[primary secondary danger]
-  option :html_options, default: proc { {} }
   option :skip_tag, default: false, optional: true
 
   style {
@@ -30,15 +29,14 @@ class Irelia::Button::Component < Irelia::Component
     }
   }
 
-  def initialize(**options)
-    super
-    @tag = @url.present? ? :a : :button
+  def classes
+    style(color:, size:)
   end
 
-  def html_options
-    @html_options.merge(
-      class: style(color:, size:),
-      href: @url.present? ? @url : nil,
-    )
+  def initialize(**options)
+    super
+
+    @tag = @url.present? ? :a : :button
+    @html_options[:href] = @url if @url.present?
   end
 end

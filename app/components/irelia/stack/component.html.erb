@@ -1,5 +1,5 @@
-<div class="<%= style(direction:, justify:, align:, grow:) %>">
+<%= content_tag :div, html_options do %>
   <% items.each do |item| %>
     <%= item %>
   <% end %>
-</div>
+<% end %>

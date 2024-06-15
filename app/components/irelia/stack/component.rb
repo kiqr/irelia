@@ -40,4 +40,8 @@ class Irelia::Stack::Component < Irelia::Component
       }
     }
   }
+
+  def classes
+    style(direction:, justify:, align:, grow:)
+  end
 end
