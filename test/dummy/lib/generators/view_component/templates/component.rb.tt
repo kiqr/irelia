@@ -5,5 +5,15 @@ class <%= class_name %>::Component < <%= parent_class %>
     base {
       %w[<%= css_class_name %>]
     }
+
+    variants {
+      variant {
+        default { %w[<%= css_class_name %>--default] }
+      }
+    }
   }
+
+  def classes
+    style(variant: :default)
+  end
 end
