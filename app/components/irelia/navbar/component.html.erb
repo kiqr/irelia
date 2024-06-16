@@ -1,16 +1,7 @@
 <%= content_tag :section, html_options do %>
   <div class="irelia-navbar__inner">
-    <div class="irelia-navbar__logo">
-      logo
-    </div>
-    <span class="irelia-navbar__separator"></span>
-    <div class="irelia-navbar__navigation">
-      navigation
-    </div>
-    <span class="irelia-navbar__separator"></span>
-    <div class="irelia-navbar__toolbar">
-      <%= render(Irelia::Button::Component.new(size: :sm, color: :secondary)) { "Sign in" } %>
-      <%= render(Irelia::Button::Component.new(size: :sm)) { "Create account" } %>
-    </div>
+    <% components.each do |component| %>
+      <%= component %>
+    <% end %>
   </div>
 <% end %>

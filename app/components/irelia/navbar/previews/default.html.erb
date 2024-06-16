@@ -1,0 +1,20 @@
+<%= render(Irelia::Navbar::Component.new) do |navbar| %>
+  <% navbar.with_section do |section| %>
+    logo
+  <% end %>
+
+  <%= navbar.with_separator %>
+
+  <% navbar.with_section(grow: true) do |section| %>
+    <%= link_to "Home", "#" %>
+    <%= link_to "Pricing", "#" %>
+    <%= link_to "Features", "#" %>
+  <% end %>
+
+  <%= navbar.with_separator %>
+
+  <%= navbar.with_section do |section| %>
+    <%= irelia_button(size: :sm, color: :secondary) { "Sign in" } %>
+    <%= irelia_button(size: :sm) { "Create account" } %>
+  <% end %>
+<% end %>
