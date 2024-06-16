@@ -20,5 +20,8 @@ module Irelia
     def add_css_classes(css_class)
       @component_classes += " #{css_class}"
     end
+
+    def variants
+    end
   end
 end

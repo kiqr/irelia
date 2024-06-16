@@ -6,7 +6,7 @@ class Irelia::Stack::Preview < Irelia::ComponentPreview
 
   # @label Default
   # @param direction select { choices: [horizontal, horizontal_reverse, vertical, vertical_reverse] } "Direction of the stack"
-  # @param justify select { choices: [flex_start, center, between, flex_end, around, evenly, stretch] } "Position along main axis"
+  # @param justify select { choices: [start, center, between, end, around, evenly, stretch] } "Position along main axis"
   # @param align select { choices: [flex_start, center, flex_end, baseline, stretch] } "Position along cross axis"
   # @param grow toggle "Grow items to fill space"
 
@@ -20,7 +20,7 @@ class Irelia::Stack::Preview < Irelia::ComponentPreview
   end
 
   # @label Horizontal
-  # @param justify select { choices: [flex_start, center, between, flex_end, around, evenly, stretch] } "Position along main axis"
+  # @param justify select { choices: [start, center, between, end, around, evenly, stretch] } "Position along main axis"
   # @param align select { choices: [flex_start, center, flex_end, baseline, stretch] } "Position along cross axis"
   # @param grow toggle "Grow items to fill space"
 
@@ -33,7 +33,7 @@ class Irelia::Stack::Preview < Irelia::ComponentPreview
   end
 
   # @label Vertical
-  # @param justify select { choices: [flex_start, center, between, flex_end, around, evenly, stretch] } "Position along main axis"
+  # @param justify select { choices: [start, center, between, end, around, evenly, stretch] } "Position along main axis"
   # @param align select { choices: [flex_start, center, flex_end, baseline, stretch] } "Position along cross axis"
   # @param grow toggle "Grow items to fill space"
 

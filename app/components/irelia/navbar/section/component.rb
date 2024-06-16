@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Irelia::Navbar::Section::Component < Irelia::Component
+  include Irelia::Variants::Justify
+
   option :grow, default: -> { false }, in: [ true, false ]
 
   def variants

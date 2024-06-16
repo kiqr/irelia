@@ -7,4 +7,7 @@ require "dry-initializer"
 require "lookbook"
 
 module Irelia
+  module Variants
+    autoload :Justify, "irelia/variants/justify"
+  end
 end
