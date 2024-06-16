@@ -6,40 +6,27 @@ class Irelia::Stack::Component < Irelia::Component
   option :align, default: -> { :baseline }, in: %i[flex_start center flex_end baseline stretch]
   option :grow, default: -> { false }, in: [ true, false ]
 
-  style {
-    base {
-      %w[irelia-stack]
-    }
-    variants {
-      direction {
-        horizontal { %w[irelia-stack--horizontal] }
-        horizontal_reverse { %w[irelia-stack--horizontal-reverse] }
-        vertical { %w[irelia-stack--vertical] }
-        vertical_reverse { %w[irelia-stack--vertical-reverse] }
-      }
-      justify {
-        flex_start { %w[irelia-stack--justify-start] }
-        center { %w[irelia-stack--justify-center] }
-        between { %w[irelia-stack--justify-space-between] }
-        flex_end { %w[irelia-stack--justify-end] }
-        around { %w[irelia-stack--justify-around] }
-        evenly { %w[irelia-stack--justify-evenly] }
-        stretch { %w[irelia-stack--justify-stretch] }
-      }
-      align {
-        flex_start { %w[irelia-stack--align-start] }
-        center { %w[irelia-stack--align-center] }
-        flex_end { %w[irelia-stack--align-end] }
-        baseline { %w[irelia-stack--align-baseline] }
-        stretch { %w[irelia-stack--align-stretch] }
-      }
-      grow {
-        yes { %w[irelia-stack--grow] }
-      }
-    }
-  }
-
-  def classes
-    style(direction:, justify:, align:, grow:)
+  def variants
+    class_names(
+      "irelia-stack",
+      "irelia-stack--default": variant == :default,
+      "irelia-stack--horizontal": direction == :horizontal,
+      "irelia-stack--horizontal-reverse": direction == :horizontal_reverse,
+      "irelia-stack--vertical": direction == :vertical,
+      "irelia-stack--vertical-reverse": direction == :vertical_reverse,
+      "irelia-stack--justify-start": justify == :flex_start,
+      "irelia-stack--justify-center": justify == :center,
+      "irelia-stack--justify-space-between": justify == :between,
+      "irelia-stack--justify-end": justify == :flex_end,
+      "irelia-stack--justify-around": justify == :around,
+      "irelia-stack--justify-evenly": justify == :evenly,
+      "irelia-stack--justify-stretch": justify == :stretch,
+      "irelia-stack--align-start": align == :flex_start,
+      "irelia-stack--align-center": align == :center,
+      "irelia-stack--align-end": align == :flex_end,
+      "irelia-stack--align-baseline": align == :baseline,
+      "irelia-stack--align-stretch": align == :stretch,
+      "irelia-stack--grow": grow
+    )
   end
 end

@@ -2,9 +2,9 @@
 
 require "test_helper"
 
-class Irelia::Navbar::Section::ComponentTest < ViewComponent::TestCase
+class Irelia::Navbar::Separator::ComponentTest < ViewComponent::TestCase
   def test_renders
-    render_inline(Irelia::Navbar::Section::Component.new)
-    assert_selector "div.irelia-navbar__section"
+    render_inline(Irelia::Navbar::Separator::Component.new)
+    assert_selector "div.irelia-navbar__separator.irelia-navbar__separator--default"
   end
 end

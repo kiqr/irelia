@@ -6,19 +6,10 @@ class Irelia::Navbar::Component < Irelia::Component
     section: { renders: Irelia::Navbar::Section::Component, as: :section }
   }
 
-  style {
-    base {
-      %w[irelia-navbar]
-    }
-
-    variants {
-      variant {
-        default { %w[irelia-navbar--default] }
-      }
-    }
-  }
-
-  def classes
-    style(variant: :default)
+  def variants
+    class_names(
+      "irelia-navbar",
+      "irelia-navbar--default": variant == :default
+    )
   end
 end

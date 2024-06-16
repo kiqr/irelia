@@ -5,6 +5,6 @@ require "test_helper"
 class Irelia::Stack::ComponentTest < ViewComponent::TestCase
   def test_renders
     render_inline(Irelia::Stack::Component.new)
-    assert_selector "div.irelia-stack"
+    assert_selector "div.irelia-stack.irelia-stack--default"
   end
 end
