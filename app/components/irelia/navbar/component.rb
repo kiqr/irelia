@@ -5,6 +5,7 @@ class Irelia::Navbar::Component < Irelia::Component
 
   renders_many :components, types: {
     brand: { renders: Irelia::Navbar::Brand::Component, as: :brand },
+    navigation: { renders: Irelia::Navbar::Navigation::Component, as: :navigation },
     separator: { renders: Irelia::Navbar::Separator::Component, as: :separator },
     section: { renders: Irelia::Navbar::Section::Component, as: :section }
   }

@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Irelia::Stack::Component < Irelia::Component
-  include Irelia::Variants::Justify
+  include Irelia::Options::Flex::Justify
 
   option :direction, default: -> { :horizontal }, in: %i[horizontal horizontal_reverse vertical vertical_reverse]
   option :align, default: -> { :baseline }, in: %i[flex_start center flex_end baseline stretch]

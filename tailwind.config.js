@@ -5,7 +5,7 @@ const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: [
     "./app/components/**/*.{rb,erb,html}",
-    "./lib/irelia/variants/**/*.{rb,erb,html}",
+    "./lib/irelia/options/**/*.{rb,erb,html}",
   ],
   theme: {
     extend: {

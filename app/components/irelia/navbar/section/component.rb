@@ -1,15 +1,13 @@
 # frozen_string_literal: true
 
 class Irelia::Navbar::Section::Component < Irelia::Component
-  include Irelia::Variants::Justify
-
-  option :grow, default: -> { false }, in: [ true, false ]
+  include Irelia::Options::Flex::Grow
+  include Irelia::Options::Flex::Justify
 
   def variants
     class_names(
       "irelia-navbar__section",
-      "irelia-navbar__section--default": variant == :default,
-      "irelia-navbar__section--grow": grow
+      "irelia-navbar__section--default": variant == :default
     )
   end
 end
