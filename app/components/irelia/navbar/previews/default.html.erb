@@ -1,7 +1,5 @@
-<%= render(Irelia::Navbar::Component.new) do |navbar| %>
-  <% navbar.with_section do |section| %>
-    logo
-  <% end %>
+<%= irelia_navbar do |navbar| %>
+  <% navbar.with_brand(url: "#") { "RANKZON" } %>
 
   <%= navbar.with_separator %>
 

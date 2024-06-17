@@ -1,19 +1,10 @@
 # frozen_string_literal: true
 
 class <%= class_name %>::Component < <%= parent_class %>
-  style {
-    base {
-      %w[<%= css_class_name %>]
-    }
-
-    variants {
-      variant {
-        default { %w[<%= css_class_name %>--default] }
-      }
-    }
-  }
-
-  def classes
-    style(variant: :default)
+  def variants
+    class_names(
+      "<%= css_class_name %>",
+      "<%= css_class_name %>--default": variant == :default
+    )
   end
 end
