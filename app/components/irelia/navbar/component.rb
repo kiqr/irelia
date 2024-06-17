@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Irelia::Navbar::Component < Irelia::Component
+  option :full_width, default: -> { false }
+
   renders_many :components, types: {
     brand: { renders: Irelia::Navbar::Brand::Component, as: :brand },
     separator: { renders: Irelia::Navbar::Separator::Component, as: :separator },
@@ -10,7 +12,8 @@ class Irelia::Navbar::Component < Irelia::Component
   def variants
     class_names(
       "irelia-navbar",
-      "irelia-navbar--default": variant == :default
+      "irelia-navbar--default": variant == :default,
+      "irelia-navbar--full-width": full_width
     )
   end
 end

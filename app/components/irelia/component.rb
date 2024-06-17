@@ -8,7 +8,7 @@ module Irelia
     def initialize(**options)
       super
 
-      @component_classes = String.new
+      @component_classes = +""
       add_css_classes(variants)
     end
 

@@ -6,4 +6,12 @@ class Irelia::Navbar::Preview < Irelia::ComponentPreview
 
   def default
   end
+
+  # @label Navigation on right side
+  def navigation_right
+  end
+
+  # @label Full width (no container)
+  def full_width
+  end
 end

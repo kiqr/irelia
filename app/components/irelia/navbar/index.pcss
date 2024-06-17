@@ -4,7 +4,15 @@
   }
 
   .irelia-navbar__inner {
-    @apply container flex items-center gap-x-8 h-full text-sm;
+    @apply flex items-center gap-x-8 h-full text-sm;
+  }
+
+  .irelia-navbar:not(.irelia-navbar--full-width) .irelia-navbar__inner {
+    @apply irelia-container;
+  }
+
+  .irelia-navbar--full-width .irelia-navbar__inner {
+    @apply px-8;
   }
 
   .irelia-navbar__separator {
