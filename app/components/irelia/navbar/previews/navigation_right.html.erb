@@ -3,10 +3,11 @@
 
   <%= navbar.with_separator %>
 
-  <% navbar.with_navigation(justify: :end) do |section| %>
-    <%= link_to "Home", "#" %>
-    <%= link_to "Pricing", "#" %>
-    <%= link_to "Features", "#" %>
+  <% navbar.with_navigation(justify: :end) do |nav| %>
+    <%= nav.with_link(url: "#", active: true) { "Home" } %>
+    <%= nav.with_link(url: "#") { "Features" } %>
+    <%= nav.with_link(url: "#") { "Pricing" } %>
+    <%= nav.with_link(url: "#") { "Documentation" } %>
   <% end %>
 
   <%= navbar.with_separator %>
