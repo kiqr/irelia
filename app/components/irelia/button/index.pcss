@@ -1,37 +1,39 @@
 @layer components {
   .irelia-button {
-    @apply inline-flex justify-center items-center gap-x-2 cursor-pointer rounded font-bold no-underline transition;
+    @apply inline-flex justify-center items-center cursor-pointer rounded font-bold no-underline transition;
   }
 
-  .irelia-button--primary {
-    @apply bg-irelia-primary hover:bg-irelia-primary-hover text-white;
-  }
+  .irelia-button--default {
+    &.irelia-button--color-primary {
+      @apply bg-irelia-primary hover:bg-irelia-primary-hover text-white;
+    }
 
-  .irelia-button--secondary {
-    @apply bg-irelia-gray hover:bg-irelia-gray-hover text-irelia-primary;
-  }
+    &.irelia-button--color-secondary {
+      @apply bg-irelia-gray hover:bg-irelia-gray-hover text-irelia-primary;
+    }
 
-  .irelia-button--danger {
-    @apply bg-irelia-danger hover:bg-irelia-danger-hover text-white;
+    &.irelia-button--color-danger {
+      @apply bg-irelia-danger hover:bg-irelia-danger-hover text-white;
+    }
   }
 
   .irelia-button--xs {
-    @apply px-3 py-1 text-xs; /* Reduced padding for XS */
+    @apply px-3 py-1 gap-x-1.5 text-xs; /* Reduced padding for XS */
   }
 
   .irelia-button--sm {
-    @apply px-4 py-1.5 text-sm; /* Adjusted padding for SM */
+    @apply px-4 py-1.5 gap-x-2 text-sm; /* Adjusted padding for SM */
   }
 
   .irelia-button--md {
-    @apply px-5 py-2 text-base; /* Slightly reduced padding for MD */
+    @apply px-5 py-2 gap-x-2.5 text-base; /* Slightly reduced padding for MD */
   }
 
   .irelia-button--lg {
-    @apply px-7 py-2.5 text-lg; /* Reduced padding for LG */
+    @apply px-7 py-2.5 gap-x-3.5 text-lg; /* Reduced padding for LG */
   }
 
   .irelia-button--xl {
-    @apply px-8 py-3 text-xl; /* Adjusted padding for XL */
+    @apply px-8 py-3 gap-x-4 text-xl; /* Adjusted padding for XL */
   }
 }

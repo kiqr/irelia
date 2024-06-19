@@ -56,6 +56,21 @@ class Irelia::Button::Preview < Irelia::ComponentPreview
 
   # @!endgroup
 
+  # @label Icon + text
+  def with_icon
+    irelia_button(icon: "fas fa-home", size: :md) { "Button with icon" }
+  end
+
+  # @label Text + icon
+  def with_right_icon
+    irelia_button(right_icon: "fas fa-arrow-right", size: :md) { "Button with icon" }
+  end
+
+  # @label Only icon
+  def only_icon
+    irelia_button(icon: "fas fa-save", size: :md)
+  end
+
   # @label Link
   # Pass a URL to the button to render an anchor tag instead of a button.
   def link(color: :default, size: :md)

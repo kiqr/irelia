@@ -7,13 +7,16 @@ class Irelia::Button::Component < Irelia::Component
   option :color, default: proc { :primary }, in: %i[primary secondary danger]
   option :skip_tag, default: false, optional: true
 
+  option :icon, optional: true
+  option :right_icon, optional: true
+
   def variants
     class_names(
       "irelia-button",
       "irelia-button--default": variant == :default,
-      "irelia-button--primary": color == :primary,
-      "irelia-button--secondary": color == :secondary,
-      "irelia-button--danger": color == :danger,
+      "irelia-button--color-primary": color == :primary,
+      "irelia-button--color-secondary": color == :secondary,
+      "irelia-button--color-danger": color == :danger,
       "irelia-button--xs": size == :xs,
       "irelia-button--sm": size == :sm,
       "irelia-button--md": size == :md,

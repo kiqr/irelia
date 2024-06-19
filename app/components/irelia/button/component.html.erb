@@ -1,7 +1,21 @@
 <% content_html = capture do %>
+  <% if icon %>
+    <span class="irelia-button__icon">
+      <%= helpers.irelia_icon icon_class: icon %>
+    </span>
+  <% end %>
+
+  <% if content %>
   <span class="irelia-button__content">
     <span class="irelia-button__text"><%= content %></span>
   </span>
+  <% end %>
+
+  <% if right_icon %>
+    <span class="irelia-button__icon">
+      <%= helpers.irelia_icon icon_class: right_icon %>
+    </span>
+  <% end %>
 <% end %>
 
 <% if skip_tag %>

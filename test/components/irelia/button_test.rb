@@ -19,7 +19,7 @@ class Irelia::Button::ComponentTest < ViewComponent::TestCase
     component = Irelia::Button::Component.new(color: :danger, size: :xs)
 
     render_inline(component) { "Delete something?" }
-    assert_selector "button.irelia-button.irelia-button--danger"
+    assert_selector "button.irelia-button.irelia-button--color-danger"
     assert_selector "button.irelia-button.irelia-button--xs"
   end
 end
