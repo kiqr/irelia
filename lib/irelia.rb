@@ -13,4 +13,10 @@ module Irelia
       autoload :Justify, "irelia/options/flex/justify"
     end
   end
+
+  autoload :Config, "irelia/config"
+
+  def self.config
+    @config ||= Irelia::Config
+  end
 end

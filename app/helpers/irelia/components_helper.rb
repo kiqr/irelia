@@ -4,6 +4,7 @@ module Irelia
 
     IRELIA_COMPONENTS_HELPERS = {
       button: "Irelia::Button::Component",
+      icon: "Irelia::Icon::Component",
       stack: "Irelia::Stack::Component",
       navbar: "Irelia::Navbar::Component",
       navbar_section: "Irelia::Navbar::Section::Component",
