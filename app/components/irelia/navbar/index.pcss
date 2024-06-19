@@ -1,6 +1,6 @@
 @layer components {
   .irelia-navbar {
-    @apply bg-irelia-surface h-[var(--irelia-navbar-height)] fixed left-0 right-0 top-0 z-50 items-center border-irelia-border border-b;
+    @apply bg-irelia-surface h-[var(--irelia-navbar-height)] sticky left-0 right-0 top-0 z-50 items-center border-irelia-border border-b;
   }
 
   .irelia-navbar__inner {
@@ -13,10 +13,6 @@
 
   .irelia-navbar--full-width .irelia-navbar__inner {
     @apply px-8;
-  }
-
-  .irelia-navbar__separator {
-    @apply w-[1px] h-[30px] bg-irelia-border;
   }
 
   .irelia-navbar__logo {
