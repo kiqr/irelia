@@ -1,7 +1,3 @@
-import { Controller } from "@hotwired/stimulus";
+import Dropdown from "@stimulus-components/dropdown";
 
-export default class extends Controller {
-  connect() {
-    this.element.textContent = "Reload me";
-  }
-}
+export default class extends Dropdown {}

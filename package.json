@@ -25,5 +25,9 @@
   },
   "peerDependencies": {
     "@hotwired/stimulus": "^3.0.0"
+  },
+  "dependencies": {
+    "@stimulus-components/dropdown": "^3.0.0",
+    "yarn": "^1.22.22"
   }
 }

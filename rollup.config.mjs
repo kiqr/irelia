@@ -8,6 +8,12 @@ export default {
     file: pkg.main,
     format: "es",
   },
-  plugins: [],
+  plugins: [
+    resolve(),
+    terser({
+      mangle: true,
+      compress: true,
+    }),
+  ],
   external: ["stimulus", "@hotwired/stimulus", "@rails/request.js"],
 };

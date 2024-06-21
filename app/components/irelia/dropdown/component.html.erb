@@ -3,13 +3,13 @@
     <%= trigger %>
   </span>
   <div
-    class="irelia-dropdown__content"
-    x-show="dropdownOpen"
-    @click.away="dropdownOpen = false"
-    x-transition:enter="ease-out duration-200"
-    x-transition:enter-start="-translate-y-2"
-    x-transition:enter-end="translate-y-0"
-    x-cloak>
+    data-irelia-dropdown-target="menu"
+    class="irelia-dropdown__content hidden"
+    data-transition-enter-from="transition-closed"
+    data-transition-enter-to="transition-open"
+    data-transition-leave-from="transition-open"
+    data-transition-leave-to="transition-closed"
+  >
     <div class="irelia-dropdown__items">
       <% items.each do |item| %>
         <%= item %>

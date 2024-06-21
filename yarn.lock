@@ -214,6 +214,13 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/merge-streams/-/merge-streams-2.3.0.tgz#719df7fb41766bc143369eaa0dd56d8dc87c9958"
   integrity sha512-LtoMMhxAlorcGhmFYI+LhPgbPZCkgP6ra1YL604EeF6U98pLlQ3iWIGMdWSC+vWmPBWBNgmDBAhnAobLROJmwg==
 
+"@stimulus-components/dropdown@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@stimulus-components/dropdown/-/dropdown-3.0.0.tgz#b85efa8ef06a94eac1a40e52ac920f5089789c8e"
+  integrity sha512-GY9Ez8T5Vbcad702seF4iuKZwv4f+VACtfO527l8vrFDFbGWWFyRljyK9FFXSPEkUC3/4PilVsYfPO2CMikkEg==
+  dependencies:
+    stimulus-use "^0.52.2"
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
@@ -1459,6 +1466,11 @@ source-map@^0.6.0:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+stimulus-use@^0.52.2:
+  version "0.52.2"
+  resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.52.2.tgz#fc992fababe03f8d8bc2d9470c8cdb40bd075917"
+  integrity sha512-413+tIw9n6Jnb0OFiQE1i3aP01i0hhGgAnPp1P6cNuBbhhqG2IOp8t1O/4s5Tw2lTvSYrFeLNdaY8sYlDaULeg==
+
 "string-width-cjs@npm:string-width@^4.2.0":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
@@ -1718,3 +1730,8 @@ yargs@^17.0.0:
     string-width "^4.2.3"
     y18n "^5.0.5"
     yargs-parser "^21.1.1"
+
+yarn@^1.22.22:
+  version "1.22.22"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.22.tgz#ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  integrity sha512-prL3kGtyG7o9Z9Sv8IPfBNrWTDmXB4Qbes8A9rEzt6wkJV8mUvoirjU0Mp3GGAU06Y0XQyA3/2/RQFVuK7MTfg==
