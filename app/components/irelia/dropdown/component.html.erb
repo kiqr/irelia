@@ -1,0 +1,12 @@
+<%= content_tag :span, html_options do %>
+  <span class="irelia-dropdown__trigger">
+    <%= trigger %>
+  </span>
+  <div class="irelia-dropdown__content">
+    <div class="irelia-dropdown__items">
+      <% items.each do |item| %>
+        <%= item %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

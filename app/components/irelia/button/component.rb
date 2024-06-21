@@ -14,6 +14,7 @@ class Irelia::Button::Component < Irelia::Component
     class_names(
       "irelia-button",
       "irelia-button--default": variant == :default,
+      "irelia-button--dropdown-item": variant == :dropdown_item,
       "irelia-button--color-primary": color == :primary,
       "irelia-button--color-secondary": color == :secondary,
       "irelia-button--color-danger": color == :danger,

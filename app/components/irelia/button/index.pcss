@@ -1,9 +1,11 @@
 @layer components {
   .irelia-button {
-    @apply inline-flex justify-center items-center cursor-pointer rounded font-bold no-underline transition;
+    @apply inline-flex justify-center items-center cursor-pointer rounded no-underline transition;
   }
 
   .irelia-button--default {
+    @apply font-bold;
+
     &.irelia-button--color-primary {
       @apply bg-irelia-primary hover:bg-irelia-primary-hover text-white;
     }
@@ -35,5 +37,17 @@
 
   .irelia-button--xl {
     @apply px-8 py-3 gap-x-4 text-xl; /* Adjusted padding for XL */
+  }
+
+  .irelia-button--dropdown-item {
+    @apply relative flex justify-start w-full select-none items-center rounded px-2 py-1.5 hover:bg-neutral-100 hover:text-neutral-900 outline-none;
+
+    .irelia-button__icon {
+      @apply w-[15px] text-center opacity-30;
+    }
+
+    .irelia-button__content + .irelia-button__icon {
+      @apply ml-auto;
+    }
   }
 }
