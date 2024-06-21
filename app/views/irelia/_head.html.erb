@@ -1,9 +1,11 @@
 <%= stylesheet_link_tag "irelia", "data-turbo-track": "reload" %>
 
-<!-- Poppins Google font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<% if Irelia.config.load_poppins %>
+  <!-- Poppins Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<% end %>
 
 <% if Irelia.config.icon_packs.include? "font_awesome" %>
   <!-- Font Awesome icons -->
@@ -12,9 +14,16 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <% end %>
 
-<!-- Use system apperance mode or selected -->
-<script>
-  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-  }
-</script>
+<% if Irelia.config.load_alpinejs %>
+  <!-- Alpine.js. Your new, lightweight, JavaScript framework. -->
+  <script src="//unpkg.com/alpinejs" defer></script>
+<% end %>
+
+<% if Irelia.config.multi_appearance %>
+  <!-- Use system apperance mode or selected -->
+  <script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    }
+  </script>
+<% end %>
