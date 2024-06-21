@@ -1,4 +1,4 @@
-<%= content_tag :span, html_options do %>
+<%= content_tag :span, html_options.merge({"data-controller": "irelia-dropdown"}) do %>
   <span class="irelia-dropdown__trigger">
     <%= trigger %>
   </span>
