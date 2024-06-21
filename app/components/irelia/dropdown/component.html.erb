@@ -10,10 +10,8 @@
     data-transition-leave-from="transition-open"
     data-transition-leave-to="transition-closed"
   >
-    <div class="irelia-dropdown__items">
-      <% items.each do |item| %>
-        <%= item %>
-      <% end %>
-    </div>
+    <% items.each do |item| %>
+      <%= item %>
+    <% end %>
   </div>
 <% end %>
