@@ -1,11 +1,10 @@
 import resolve from "@rollup/plugin-node-resolve";
 import { terser } from "rollup-plugin-terser";
-import pkg from "./package.json" with { type: "json" };
 
 export default {
-  input: pkg.module,
+  input: "./app/assets/src/main.js",
   output: {
-    file: pkg.main,
+    file: "./app/assets/dist/javascripts/irelia.js",
     format: "es",
   },
   plugins: [

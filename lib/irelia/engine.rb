@@ -14,8 +14,9 @@ module Irelia
 
     # Add the app/javascript directory to the asset pipeline
     initializer "irelia.assets.precompile" do |app|
-      app.config.assets.paths << Irelia::Engine.root.join("app", "assets", "dist")
-      app.config.assets.precompile += %w[irelia.css irelia.js]
+      app.config.assets.paths << Irelia::Engine.root.join("app", "assets", "dist", "javascripts")
+      app.config.assets.paths << Irelia::Engine.root.join("app", "assets", "dist", "stylesheets")
+      app.config.assets.precompile += %w[irelia_manifest]
     end
   end
 end
