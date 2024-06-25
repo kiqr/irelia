@@ -3,10 +3,12 @@ module Irelia
     include ActionView::Helpers::UrlHelper
 
     IRELIA_COMPONENTS_HELPERS = {
+      app_shell: "Irelia::AppShell::Component",
       button: "Irelia::Button::Component",
       container: "Irelia::Container::Component",
       dropdown: "Irelia::Dropdown::Component",
       icon: "Irelia::Icon::Component",
+      sidebar: "Irelia::Sidebar::Component",
       stack: "Irelia::Stack::Component",
       navbar: "Irelia::Navbar::Component",
       navbar_section: "Irelia::Navbar::Section::Component",

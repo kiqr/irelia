@@ -1,0 +1,8 @@
+<%= content_tag :aside, html_options do %>
+  <div class="irelia-sidebar__inner">
+    <% components.each do |component| %>
+      <%= component %>
+    <% end %>
+    <%= content %>
+  </div>
+<% end %>
