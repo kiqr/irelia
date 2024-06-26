@@ -35,4 +35,8 @@ class Irelia::Dropdown::Preview < Irelia::ComponentPreview
       dropdown.with_item(right_icon: "fas fa-right-from-bracket") { "Sign out" }
     end
   end
+
+  # @label Direction up
+  def direction_up
+  end
 end

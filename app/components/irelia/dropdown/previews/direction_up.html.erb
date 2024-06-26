@@ -1,0 +1,10 @@
+<div style="margin-top: 120px">
+  <%= irelia_dropdown(open: true, direction: :up) do |dropdown|
+    dropdown.with_trigger(size: :sm, icon: "fas fa-gear")
+    dropdown.with_item(right_icon: "fas fa-user") { "Profile" }
+    dropdown.with_item(right_icon: "fas fa-gear") { "Settings" }
+    dropdown.with_item(right_icon: "fas fa-users") { "Switch account" }
+    dropdown.with_item(right_icon: "fas fa-right-from-bracket") { "Sign out" }
+  end
+  %>
+</div>

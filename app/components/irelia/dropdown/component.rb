@@ -2,6 +2,7 @@
 
 class Irelia::Dropdown::Component < Irelia::Component
   option :open, default: -> { false }
+  option :direction, default: -> { :down }, in: %i[down up]
 
   renders_one :trigger, "DropdownTrigger"
   renders_many :items, "DropdownItem"
@@ -9,7 +10,9 @@ class Irelia::Dropdown::Component < Irelia::Component
   def variants
     class_names(
       "irelia-dropdown",
-      "irelia-dropdown--default": variant == :default
+      "irelia-dropdown--default": variant == :default,
+      "irelia-dropdown--direction-down": direction == :down,
+      "irelia-dropdown--direction-up": direction == :up
     )
   end
 
