@@ -1,1 +1,12 @@
-<%= irelia_sidebar %>
+<%= irelia_sidebar do |sidebar| %>
+  <% sidebar.with_brand(url: root_path) { "Irelia" } %>
+  <% sidebar.with_navigation do |navbar| %>
+    <% navbar.with_link(url: "#", icon: "fa fa-home", active: true) { "Home" } %>
+    <% navbar.with_link(url: "#", icon: "fa fa-globe") { "Websites" } %>
+    <% navbar.with_link(url: "#", icon: "fab fa-github") { "Repositories" } %>
+    <% navbar.with_link(url: "#", icon: "fa fa-book") { "Guide & documenation" } %>
+    <% navbar.with_link(url: "#", icon: "fa fa-gear") { "Settings" } %>
+  <% end %>
+  <% sidebar.with_section(grow: true) %>
+  <% sidebar.with_section { "footer" } %>
+<% end %>

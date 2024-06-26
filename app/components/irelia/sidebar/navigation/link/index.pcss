@@ -1,0 +1,20 @@
+@layer components {
+  .irelia-sidebar__navigation__link {
+  }
+
+  .irelia-sidebar__navigation__link--default {
+    @apply px-8 flex py-2 font-semibold gap-x-2.5 border-l-4 border-l-transparent;
+
+    &.irelia-sidebar__navigation__link--active {
+      @apply font-bold text-irelia-primary border-l-irelia-primary;
+    }
+
+    &:hover {
+      @apply text-irelia-primary;
+    }
+
+    .irelia-sidebar__navigation__link__icon {
+      @apply w-6 flex items-center justify-center;
+    }
+  }
+}

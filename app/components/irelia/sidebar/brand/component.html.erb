@@ -1,0 +1,6 @@
+<%= content_tag(:section, html_options) do %>
+  <a href="<%= url %>" class="irelia-sidebar__brand--logo"><%= content %></a>
+  <span class="irelia-sidebar__brand--actions">
+    <%= render(Irelia::Icon::Component.new) { "fa fa-bell" } %>
+  </span>
+<% end %>
