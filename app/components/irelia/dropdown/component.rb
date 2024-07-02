@@ -5,6 +5,7 @@ class Irelia::Dropdown::Component < Irelia::Component
   option :direction, default: -> { :down }, in: %i[down up]
 
   renders_one :trigger, "DropdownTrigger"
+  renders_one :custom_trigger, "CustomDropdownTrigger"
   renders_many :items, "DropdownItem"
 
   def variants
@@ -25,6 +26,18 @@ class Irelia::Dropdown::Component < Irelia::Component
       options[:html_options] ||= {}
       options[:html_options]["data"] = { "action": "irelia-dropdown#toggle click@window->irelia-dropdown#hide" }
       super(**options)
+    end
+  end
+
+  class CustomDropdownTrigger < Irelia::Component
+    def initialize(**options)
+      options[:html_options] ||= {}
+      options[:html_options]["data"] = { "action": "irelia-dropdown#toggle click@window->irelia-dropdown#hide" }
+      super(**options)
+    end
+
+    def call
+      content_tag(:button, content, html_options)
     end
   end
 

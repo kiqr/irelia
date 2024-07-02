@@ -3,6 +3,7 @@ module Irelia
     include ActionView::Helpers::UrlHelper
 
     IRELIA_COMPONENTS_HELPERS = {
+      account_switcher: "Irelia::AccountSwitcher::Component",
       app_shell: "Irelia::AppShell::Component",
       button: "Irelia::Button::Component",
       container: "Irelia::Container::Component",

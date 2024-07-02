@@ -1,0 +1,15 @@
+<div class="w-[250px]">
+  <%=
+    irelia_account_switcher(
+      team_name: "Foobar Inc.",
+      name: "John Doe",
+      avatar: "https://www.gravatar.com/avatar/0",
+      open: true,
+      direction: :down
+    ) do |switcher|
+      switcher.with_account(account_name: "John Doe", url: "#", personal: true)
+      switcher.with_account(account_name: "Team one", url: "#")
+      switcher.with_account(account_name: "Team two", url: "#")
+    end
+  %>
+</div>
