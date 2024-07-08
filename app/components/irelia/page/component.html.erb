@@ -1,0 +1,13 @@
+<%= content_tag :main, html_options do %>
+  <%= render(Irelia::Container::Component.new) do %>
+    <% if breadcrumbs %>
+      <div class="h-28 flex items-center">
+        <%= render(breadcrumbs) %>
+      </div>
+    <% end %>
+
+    <%= header if header %>
+
+    <%= content %>
+  <% end %>
+<% end %>

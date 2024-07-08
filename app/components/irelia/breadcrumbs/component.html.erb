@@ -1,0 +1,13 @@
+<%= content_tag :div, html_options do %>
+  <nav class="flex justify-between">
+    <ol class="inline-flex items-center mb-3 space-x-1 [&_.active-breadcrumb]:text-neutral-600 [&_.active-breadcrumb]:font-medium sm:mb-0">
+      <li class="flex items-center h-full"><%= helpers.irelia_icon(html_options: { class: "text-xs" } ) { "fa fa-home" } %></li>
+      <svg class="w-5 h-5 text-gray-400/70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="none"><path d="M10 8.013l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+      <li>Middagskassen.se</li>
+      <svg class="w-5 h-5 text-gray-400/70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="none"><path d="M10 8.013l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+      <li>Reports</li>
+      <svg class="w-5 h-5 text-gray-400/70" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="none" stroke="none"><path d="M10 8.013l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+      <li>View all</li>
+     </ol>
+  </nav>
+<% end %>
