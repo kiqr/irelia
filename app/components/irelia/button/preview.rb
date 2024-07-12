@@ -46,12 +46,12 @@ class Irelia::Button::Preview < Irelia::ComponentPreview
 
   # @label Large
   def lg_size
-    irelia_button(size: :lg) { "Button" }
+    irelia_button(size: :lg) { "Large button" }
   end
 
   # @label Extra large
   def xl_size
-    irelia_button(size: :xl) { "Button" }
+    irelia_button(size: :xl) { "Extra large button" }
   end
 
   # @!endgroup
