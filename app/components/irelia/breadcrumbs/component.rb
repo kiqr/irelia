@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Irelia::Breadcrumbs::Component < Irelia::Component
+  option :breadcrumbs, default: -> { [] }
+
   def variants
     class_names(
       "irelia-breadcrumbs",

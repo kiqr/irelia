@@ -1,6 +1,14 @@
 @layer components {
   .irelia-breadcrumbs {
     @apply flex gap-y-1.5 flex-col justify-center text-sm;
+
+    li {
+      @apply flex items-center h-full;
+    }
+
+    .irelia-icon svg.fa-chevron-right {
+      @apply text-xs px-2 text-gray-400;
+    }
   }
 
   .irelia-breadcrumbs--default {
