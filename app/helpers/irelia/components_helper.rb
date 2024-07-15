@@ -10,7 +10,7 @@ module Irelia
       container: "Irelia::Container::Component",
       dropdown: "Irelia::Dropdown::Component",
       icon: "Irelia::Icon::Component",
-      page: "Irelia::Page::Component",
+      page_header: "Irelia::PageHeader::Component",
       sidebar: "Irelia::Sidebar::Component",
       stack: "Irelia::Stack::Component",
       navbar: "Irelia::Navbar::Component",

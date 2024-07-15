@@ -9,4 +9,10 @@ class Irelia::Breadcrumbs::Component < Irelia::Component
       "irelia-breadcrumbs--default": variant == :default
     )
   end
+
+  private
+
+  def last_index
+    breadcrumbs.count - 1
+  end
 end

@@ -1,16 +1,11 @@
 <%= content_tag :div, html_options do %>
   <nav class="flex justify-between">
     <ol class="inline-flex items-center mb-3 space-x-1 [&_.active-breadcrumb]:text-neutral-600 [&_.active-breadcrumb]:font-medium sm:mb-0">
-      <li>
-        <%= link_to dashboard_path do %>
-          <%= helpers.irelia_icon(html_options: { class: "text-xs" } ) { "fa fa-home" } %>
-        <% end %>
-      </li>
-      <% breadcrumbs.each do |crumb| %>
-        <%= helpers.irelia_icon { "fa fa-chevron-right" } %>
+      <% breadcrumbs.each_with_index do |crumb, index| %>
         <li>
           <%= link_to crumb.name, crumb.path %>
         </li>
+        <%= helpers.irelia_icon { "fa fa-chevron-right" } unless index == last_index %>
       <% end %>
      </ol>
   </nav>

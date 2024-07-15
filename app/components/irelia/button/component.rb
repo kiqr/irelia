@@ -31,5 +31,6 @@ class Irelia::Button::Component < Irelia::Component
 
     @tag = @url.present? ? :a : :button
     @html_options[:href] = @url if @url.present?
+    @html_options[:type] = @type
   end
 end

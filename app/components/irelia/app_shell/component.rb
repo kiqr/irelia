@@ -2,6 +2,7 @@
 
 class Irelia::AppShell::Component < Irelia::Component
   renders_one :sidebar, Irelia::Sidebar::Component
+  renders_one :breadcrumbs, Irelia::Breadcrumbs::Component
 
   def variants
     class_names(

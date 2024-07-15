@@ -1,7 +1,12 @@
 <%= content_tag :div, html_options do %>
   <%= sidebar if sidebar %>
+  <main class="irelia-app-shell--main">
+    <% if breadcrumbs %>
+      <div class="irelia-app-shell--breadcrumbs-container">
+        <%= breadcrumbs %>
+      </div>
+    <% end %>
 
-  <div class="flex-1 grow">
     <%= content %>
-  </div>
+  </main>
 <% end %>

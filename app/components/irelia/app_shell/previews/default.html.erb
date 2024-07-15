@@ -11,5 +11,6 @@
     <% sidebar.with_section(grow: true) %>
     <% sidebar.with_section { "footer" } %>
   <% end %>
-  <%= yield %>
+
+  <%= irelia_page_header(title: "Hello world!", subline: "This is an example of the app shell.") %>
 <% end %>
