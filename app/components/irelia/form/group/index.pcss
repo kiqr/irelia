@@ -1,0 +1,28 @@
+@layer components {
+  .irelia-form__group {
+    @apply flex flex-col shadow-sm bg-white rounded p-5 relative w-full gap-y-1.5;
+
+    label {
+      @apply font-bold uppercase text-sm text-irelia-primary whitespace-nowrap;
+    }
+
+    &.irelia-form__group--invalid {
+      label {
+        @apply text-irelia-danger;
+      }
+    }
+
+    input:not([type="checkbox"]),
+    textarea,
+    select {
+      @apply appearance-none p-0 m-0 w-full border-0 focus:ring-0 focus:outline-none bg-white hover:text-irelia-primary focus:text-irelia-primary placeholder-neutral-400;
+    }
+  }
+
+  .irelia-group__errors {
+    @apply text-irelia-danger text-sm -mb-1.5;
+  }
+
+  .irelia-form__group--default {
+  }
+}

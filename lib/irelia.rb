@@ -14,6 +14,8 @@ module Irelia
     end
   end
 
+  autoload :FormBuilder, "irelia/form_builder"
+
   autoload :Config, "irelia/config"
 
   def self.config
