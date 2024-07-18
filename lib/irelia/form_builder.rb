@@ -10,6 +10,12 @@ module Irelia
       render_component(:text_field, method, options, &block)
     end
 
+    def submit(value = nil, options = {})
+      component = Irelia::Button::Component.new(type: :submit, html_options: options)
+      component.with_content(value) if value
+      component.render_in(@template)
+    end
+
     private
 
     def render_component(component_name, method, options, &block)
