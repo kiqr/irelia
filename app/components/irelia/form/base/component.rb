@@ -4,10 +4,9 @@ class Irelia::Form::Base::Component < Irelia::Component
   option :object, required: true
   option :object_name, required: true
   option :method, required: true
-  option :options, default: -> { {} }
 
   def label_text
-    options[:label] || object&.class&.human_attribute_name(method)
+    html_options[:label] || object&.class&.human_attribute_name(method)
   end
 
   def input_options
@@ -25,7 +24,7 @@ class Irelia::Form::Base::Component < Irelia::Component
       object: object,
       object_name: object_name,
       method: method,
-      options: options
+      html_options: html_options
     )
   end
 
