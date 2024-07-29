@@ -1,0 +1,41 @@
+@layer components {
+  .irelia-notification {
+    @apply relative flex rounded py-4 w-full shadow-sm;
+
+    .icon {
+      @apply flex items-center justify-center px-6;
+
+      .fa {
+        @apply w-6 h-6;
+      }
+    }
+
+    .text {
+      @apply flex flex-col gap-y-0.5 w-full;
+
+      h5 {
+        @apply font-semibold  leading-none tracking-tight;
+      }
+
+      span {
+        @apply text-sm opacity-80;
+      }
+    }
+  }
+
+  .irelia-notification--notice {
+    @apply bg-neutral-100 text-neutral-600;
+  }
+
+  .irelia-notification--success {
+    @apply bg-green-50 text-green-600;
+  }
+
+  .irelia-notification--warning {
+    @apply bg-yellow-50 text-yellow-600;
+  }
+
+  .irelia-notification--alert {
+    @apply bg-red-50 text-red-600;
+  }
+}
