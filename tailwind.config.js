@@ -52,4 +52,5 @@ module.exports = {
       });
     }),
   ],
+  safelist: ["irelia-form"],
 };

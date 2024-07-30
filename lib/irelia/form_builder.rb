@@ -6,8 +6,12 @@ module Irelia
     #   end
     # end
 
-    def text_field(method, options = {}, &block)
-      render_component(:text_field, method, options, &block)
+    def text_field(method, html_options = {}, &block)
+      render_component(:text_field, method, html_options: html_options, &block)
+    end
+
+    def select(method, choices = nil, options = {}, html_options = {}, &block)
+      render_component(:select, method, choices: choices, options: options, html_options: html_options, &block)
     end
 
     def submit(value = nil, options = {})
@@ -18,13 +22,14 @@ module Irelia
 
     private
 
-    def render_component(component_name, method, options, &block)
-      component = component_klass(component_name).new(method: method, html_options: options, object: @object, object_name: @object_name)
+    def render_component(component_name, method, **args, &block)
+      component = component_klass(component_name).new(method: method, object: @object, object_name: @object_name, **args)
       component.render_in(@template, &block)
     end
 
     def component_klass(component_name)
-      "Irelia::Form::TextField::Component".safe_constantize
+      class_name = component_name.to_s.camelize
+      "Irelia::Form::#{class_name}::Component".safe_constantize
     end
   end
 end

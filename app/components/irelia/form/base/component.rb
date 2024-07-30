@@ -4,6 +4,7 @@ class Irelia::Form::Base::Component < Irelia::Component
   option :object, required: true
   option :object_name, required: true
   option :method, required: true
+  option :options, default: -> { {} }, required: false
 
   def label_text
     html_options[:label] || object&.class&.human_attribute_name(method)
