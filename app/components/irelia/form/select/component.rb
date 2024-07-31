@@ -3,6 +3,12 @@
 class Irelia::Form::Select::Component < Irelia::Form::Base::Component
   option :choices, required: false, default: -> { nil }
 
+  def options
+    @options.merge({
+      selected: value
+    })
+  end
+
   def variants
     class_names(
       "irelia-form__select",
