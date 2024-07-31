@@ -1,0 +1,7 @@
+<%= content_tag :nav, html_options do %>
+  <%= render(Irelia::Stack::Component.new) do %>
+    <% links.each do |link| %>
+      <%= link %>
+    <% end %>
+  <% end %>
+<% end %>
