@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class Irelia::Notification::Component < Irelia::Component
-  option :text
   option :variant, default: proc { :notice }, in: %i[notice success warning error]
+  option :title, default: -> { nil }, required: false
 
   def heading
     translations = {
@@ -12,7 +12,7 @@ class Irelia::Notification::Component < Irelia::Component
       alert: "Error"
     }
 
-    translations[variant]
+    title || translations[variant]
   end
 
   def icon_class
