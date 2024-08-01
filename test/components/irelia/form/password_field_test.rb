@@ -1,9 +1,19 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require "form_component_test_case"
 
-class Irelia::Form::PasswordField::ComponentTest < ViewComponent::TestCase
+class Irelia::Form::PasswordField::ComponentTest < FormComponentTestCase
   def test_renders
-    skip "Add a test to verify the component renders successfully"
+    render_inline(Irelia::Form::PasswordField::Component.new(
+      method: :password,
+      object: @object,
+      object_name: @object_name,
+      html_options: {
+        label: "Password"
+      }
+    ))
+
+    assert_selector "div.irelia-form__password-field input[type='password'][name='user[password]']"
+    assert_selector "div.irelia-form__password-field label", text: "Password"
   end
 end

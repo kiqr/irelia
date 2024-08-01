@@ -1,11 +1,19 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require "form_component_test_case"
 
-class Irelia::Form::TextField::ComponentTest < ViewComponent::TestCase
+class Irelia::Form::TextField::ComponentTest < FormComponentTestCase
   def test_renders
-    skip "Add a test to verify the component renders successfully"
-    # render_inline(Irelia::Form::TextField::Component.new)
-    # assert_selector "div.irelia-form__text-field"
+    render_inline(Irelia::Form::TextField::Component.new(
+      method: :name,
+      object: @object,
+      object_name: @object_name,
+      html_options: {
+        label: "Full name"
+      }
+    ))
+
+    assert_selector "div.irelia-form__text-field input[type='text'][name='user[name]']"
+    assert_selector "div.irelia-form__text-field label", text: "Full name"
   end
 end
