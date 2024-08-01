@@ -7,10 +7,7 @@ class Irelia::Form::PasswordField::ComponentTest < FormComponentTestCase
     render_inline(Irelia::Form::PasswordField::Component.new(
       method: :password,
       object: @object,
-      object_name: @object_name,
-      html_options: {
-        label: "Password"
-      }
+      object_name: @object_name
     ))
 
     assert_selector "div.irelia-form__password-field input[type='password'][name='user[password]']"

@@ -7,7 +7,11 @@ class Irelia::Form::Base::Component < Irelia::Component
   option :options, default: -> { {} }, required: false
 
   def label_text
-    html_options[:label] || object&.class&.human_attribute_name(method)
+    options[:label] || object&.class&.human_attribute_name(method)
+  end
+
+  def hint_text
+    options[:hint]
   end
 
   def input_options
@@ -25,7 +29,8 @@ class Irelia::Form::Base::Component < Irelia::Component
       object: object,
       object_name: object_name,
       method: method,
-      html_options: html_options
+      html_options: html_options,
+      options: options
     )
   end
 
@@ -39,5 +44,9 @@ class Irelia::Form::Base::Component < Irelia::Component
 
   def has_errors?
     errors&.any?
+  end
+
+  def has_hint?
+    hint_text.present?
   end
 end

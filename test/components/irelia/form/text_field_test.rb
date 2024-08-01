@@ -8,9 +8,8 @@ class Irelia::Form::TextField::ComponentTest < FormComponentTestCase
       method: :name,
       object: @object,
       object_name: @object_name,
-      html_options: {
-        label: "Full name"
-      }
+      options: { label: "Full name" },
+      html_options: {}
     ))
 
     assert_selector "div.irelia-form__text-field input[type='text'][name='user[name]']"

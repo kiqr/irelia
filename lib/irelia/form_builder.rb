@@ -7,11 +7,11 @@ module Irelia
     # end
 
     def text_field(method, html_options = {}, &block)
-      render_component(:text_field, method, html_options: html_options, &block)
+      render_component(:text_field, method, options: options, html_options: html_options, &block)
     end
 
     def password_field(method, html_options = {}, &block)
-      render_component(:password_field, method, html_options: html_options, &block)
+      render_component(:password_field, method, options: options, html_options: html_options, &block)
     end
 
     def select(method, choices = nil, options = {}, html_options = {}, &block)
@@ -27,6 +27,11 @@ module Irelia
     private
 
     def render_component(component_name, method, **args, &block)
+      args[:options] = args[:options].merge({
+        label: args[:html_options].delete(:label),
+        hint: args[:html_options].delete(:hint)
+      })
+
       component = component_klass(component_name).new(method: method, object: @object, object_name: @object_name, **args)
       component.render_in(@template, &block)
     end

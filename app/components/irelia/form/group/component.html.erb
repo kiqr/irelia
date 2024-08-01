@@ -5,6 +5,12 @@
 
   <%= content %>
 
+  <% if has_hint? %>
+    <div class="irelia-group__hint">
+      <%= hint_text %>
+    </div>
+  <% end %>
+
   <% if has_errors? %>
     <div class="irelia-group__errors">
       <%= error_messages  %>

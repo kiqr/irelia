@@ -24,12 +24,12 @@ class Irelia::Form::Select::ComponentTest < FormComponentTestCase
       method: :language,
       object: @object,
       object_name: @object_name,
-      choices: ["English", "Swedish"],
+      choices: [ "English", "Swedish" ],
       options: {
-        prompt: "Select your language",
+        prompt: "Select your language"
       },
       html_options: {
-        label: "Language",
+        label: "Language"
       }
     }
   end
