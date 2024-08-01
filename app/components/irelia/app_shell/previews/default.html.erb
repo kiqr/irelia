@@ -12,7 +12,7 @@
     <% sidebar.with_section { "footer" } %>
   <% end %>
 
-  <% app_shell.with_sub_menu do |menu|%>
+  <% app_shell.with_submenu do |menu|%>
     <%= menu.with_link(active: true) { "Welcome" } %>
     <%= menu.with_link { "Activity log" } %>
   <% end %>
