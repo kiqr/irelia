@@ -14,6 +14,10 @@ module Irelia
       render_component(:password_field, method, options: options, html_options: html_options, &block)
     end
 
+    def email_field(method, html_options = {}, &block)
+      render_component(:email_field, method, options: options, html_options: html_options, &block)
+    end
+
     def select(method, choices = nil, options = {}, html_options = {}, &block)
       render_component(:select, method, choices: choices, options: options, html_options: html_options, &block)
     end
