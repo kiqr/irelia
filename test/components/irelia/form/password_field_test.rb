@@ -10,7 +10,7 @@ class Irelia::Form::PasswordField::ComponentTest < FormComponentTestCase
       object_name: @object_name
     ))
 
-    assert_selector "div.irelia-form__password-field input[type='password'][name='user[password]']"
-    assert_selector "div.irelia-form__password-field label", text: "Password"
+    assert_selector "#user_password_group input[type='password'][name='user[password]']"
+    assert_selector "#user_password_group label", text: "Password"
   end
 end

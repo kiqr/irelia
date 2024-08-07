@@ -10,7 +10,7 @@ class Irelia::Form::EmailField::ComponentTest < FormComponentTestCase
       object_name: @object_name
     ))
 
-    assert_selector "div.irelia-form__email-field input[type='email'][name='user[email]']"
-    assert_selector "div.irelia-form__email-field label", text: "Email"
+    assert_selector "#user_email_group input[type='email'][name='user[email]']"
+    assert_selector "#user_email_group label", text: "Email"
   end
 end

@@ -29,7 +29,6 @@ class Irelia::Form::Base::Component < Irelia::Component
       object: object,
       object_name: object_name,
       method: method,
-      html_options: html_options,
       options: options
     )
   end

@@ -12,7 +12,7 @@ class Irelia::Form::TextField::ComponentTest < FormComponentTestCase
       html_options: {}
     ))
 
-    assert_selector "div.irelia-form__text-field input[type='text'][name='user[name]']"
-    assert_selector "div.irelia-form__text-field label", text: "Full name"
+    assert_selector "#user_name_group input[type='text'][name='user[name]']"
+    assert_selector "#user_name_group label", text: "Full name"
   end
 end

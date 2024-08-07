@@ -6,15 +6,15 @@ class Irelia::Form::Select::ComponentTest < FormComponentTestCase
   def test_renders
     render_inline(Irelia::Form::Select::Component.new(**component_options))
 
-    assert_selector "div.irelia-form__select select[name='user[language]']"
-    assert_selector "div.irelia-form__select label", text: "Language"
-    assert_selector "div.irelia-form__select select option", text: "Select your language"
+    assert_selector "#user_language_group select[name='user[language]']"
+    assert_selector "#user_language_group label", text: "Language"
+    assert_selector "#user_language_group select option", text: "Select your language"
   end
 
   def test_renders_with_selected_value
     @object.language = "Swedish"
     render_inline(Irelia::Form::Select::Component.new(**component_options))
-    assert_selector "div.irelia-form__select select option[selected]", text: "Swedish"
+    assert_selector "#user_language_group select option[selected]", text: "Swedish"
   end
 
   private
