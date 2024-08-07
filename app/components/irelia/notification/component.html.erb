@@ -3,7 +3,7 @@
     <%= helpers.irelia_icon { icon_class } %>
   </div>
   <div class="text">
-    <h5><%= heading %></h5>
+    <% if title %><h5><%= title %></h5><% end %>
     <span><%= content %></span>
   </div>
 <% end %>

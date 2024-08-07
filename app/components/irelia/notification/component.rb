@@ -4,17 +4,6 @@ class Irelia::Notification::Component < Irelia::Component
   option :variant, default: proc { :notice }, in: %i[notice success warning error]
   option :title, default: -> { nil }, required: false
 
-  def heading
-    translations = {
-      notice: "Info",
-      success: "Success",
-      warning: "Warning",
-      alert: "Error"
-    }
-
-    title || translations[variant]
-  end
-
   def icon_class
     icons = {
       notice: "fa fa-info-circle",
