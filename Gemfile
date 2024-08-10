@@ -24,6 +24,9 @@ gem "stimulus-rails"
 # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
 gem "rubocop-rails-omakase", require: false
 
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem "faker"
+
 # Start debugger with binding.b [https://github.com/ruby/debug]
 # gem "debug", ">= 1.0.0"
 

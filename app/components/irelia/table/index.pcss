@@ -1,0 +1,32 @@
+@layer components {
+  .irelia-table {
+    @apply min-w-full divide-y divide-irelia-gray text-left;
+
+    thead {
+      tr {
+        th {
+          @apply px-5 py-3 text-sm font-bold uppercase;
+        }
+      }
+    }
+
+    tbody {
+      @apply divide-y divide-irelia-gray;
+
+      tr {
+        @apply bg-white text-sm text-zinc-600 hover:text-black;
+
+        td {
+          @apply px-5 py-3;
+        }
+
+        &:nth-child(odd) {
+          @apply bg-zinc-50;
+        }
+      }
+    }
+  }
+
+  .irelia-table--default {
+  }
+}

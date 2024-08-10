@@ -1,6 +1,15 @@
 <%= content_tag :header, html_options do %>
-  <h1><%= title %></h1>
-  <% if subline %>
-    <p><%= subline %></p>
-  <% end %>
+  <div class="irelia-page-header__inner">
+    <h1><%= title %></h1>
+    <% if subline %>
+      <p><%= subline %></p>
+    <% end %>
+  </div>
+  <div class="irelia-page-header__action-buttons">
+    <%= render(Irelia::Stack::Component.new) do %>
+      <% buttons.each do |button| %>
+        <%= button %>
+      <% end %>
+    <% end %>
+  </div>
 <% end %>

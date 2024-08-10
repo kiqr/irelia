@@ -1,0 +1,19 @@
+<%=
+irelia_table do |table|
+  table.with_column { "Name" }
+  table.with_column { "Age" }
+  table.with_column { "Address" }
+  table.with_column(html_options: { class: "text-right" }) { "Action" }
+
+  5.times do
+    table.with_row do |row|
+      row.with_cell { Faker::Name.name }
+      row.with_cell { Faker::Number.leading_zero_number(digits: 2) }
+      row.with_cell { Faker::Address.full_address }
+      row.with_cell(html_options: { class: "text-right flex justify-end gap-x-2" }) do
+        irelia_button(size: :xs) { "Edit" }
+      end
+    end
+  end
+end
+%>
