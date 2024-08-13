@@ -1,0 +1,6 @@
+<%= irelia_modal(name: "popup_modal", title: "Remote loaded content") %>
+
+<%= irelia_stack do %>
+  <%= irelia_button(url: modals_preview_path, modal: "popup_modal") { "Open Modal 1" } %>
+  <%= irelia_button(url: modals_preview2_path, modal: "popup_modal") { "Open Modal 2" } %>
+<% end %>

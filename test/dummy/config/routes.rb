@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
+  # => Modal demo
+  get "modals/preview", to: "modals#preview"
+  get "modals/preview2", to: "modals#preview2"
+
   mount Lookbook::Engine, at: "/lookbook"
   root to: redirect("/lookbook")
 end

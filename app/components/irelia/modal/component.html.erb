@@ -1,0 +1,28 @@
+<div data-controller="irelia-modal">
+  <div class="irelia-modal__container hidden"
+    data-irelia-modal-target="container"
+    data-action="keyup@window->irelia-modal#closeWithKeyboard"
+    >
+    <div class="irelia-modal__background" data-action="click->irelia-modal#close" data-irelia-modal-target="background"></div>
+    <%= content_tag :div, html_options do %>
+      <div class="irelia-modal__header">
+        <% if title %>
+          <h3><%= title %></h3>
+        <% end %>
+        <button class="irelia-modal__close-button" data-action="click->irelia-modal#close">
+          <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+        </button>
+      </div>
+
+      <div class="irelia-modal__content">
+        <% if content %>
+          <%= content %>
+        <% else %>
+          <div data-irelia-modal-target="loader">Loading</div>
+          <turbo-frame id="<%= @name %>" data-irelia-modal-target="frame" src="" target="_top"></turbo-frame>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <%= button %>
+</div>

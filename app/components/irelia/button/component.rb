@@ -6,6 +6,7 @@ class Irelia::Button::Component < Irelia::Component
   option :size, default: -> { :md }, in: [ :xs, :sm, :md, :lg, :xl ]
   option :color, default: proc { :primary }, in: %i[primary secondary danger]
   option :skip_tag, default: false, optional: true
+  option :modal, optional: true
 
   option :icon, optional: true
   option :right_icon, optional: true
@@ -32,5 +33,7 @@ class Irelia::Button::Component < Irelia::Component
     @tag = @url.present? ? :a : :button
     @html_options[:href] = @url if @url.present?
     @html_options[:type] = @type
+    @html_options[:data] = {} unless @html_options[:data].present?
+    @html_options[:data]["turbo-frame"] = @modal if @modal.present?
   end
 end

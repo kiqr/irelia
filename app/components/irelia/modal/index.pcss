@@ -1,0 +1,41 @@
+@layer components {
+  .irelia-modal__container {
+    @apply fixed top-0 left-0 z-[99] flex items-center justify-center w-screen h-screen px-10;
+  }
+
+  .irelia-modal__background {
+    @apply absolute inset-0 w-full h-full bg-black bg-opacity-20;
+  }
+
+  .irelia-modal {
+    @apply relative w-full py-6 bg-white px-7 rounded-lg shadow;
+
+    .irelia-modal__header {
+      @apply flex items-center justify-between;
+
+      h3 {
+        @apply text-lg font-bold text-irelia-primary;
+      }
+    }
+
+    .irelia-modal__close-button {
+      @apply absolute top-0 right-0 flex items-center justify-center w-8 h-8 mt-5 mr-5 text-gray-600 rounded-full hover:text-gray-800 hover:bg-gray-50;
+    }
+
+    .irelia-modal__content {
+      @apply relative w-auto;
+    }
+  }
+
+  .irelia-modal--with-title {
+    @apply border-b border-irelia-border;
+
+    .irelia-modal__header {
+      @apply border-b border-irelia-border pb-3.5 mb-5;
+    }
+  }
+
+  .irelia-modal--default {
+    @apply sm:max-w-lg;
+  }
+}
