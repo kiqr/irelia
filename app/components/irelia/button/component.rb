@@ -33,7 +33,6 @@ class Irelia::Button::Component < Irelia::Component
     @tag = @url.present? ? :a : :button
     @html_options[:href] = @url if @url.present?
     @html_options[:type] = @type
-    @html_options[:data] = {} unless @html_options[:data].present?
-    @html_options[:data]["turbo-frame"] = @modal if @modal.present?
+    @html_options["data-turbo-frame"] = @modal if @modal.present?
   end
 end
