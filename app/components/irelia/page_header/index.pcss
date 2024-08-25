@@ -1,5 +1,10 @@
 @layer components {
   .irelia-page-header {
+    .irelia-page-header__action-buttons {
+    }
+  }
+
+  .irelia-page-header--default {
     @apply flex space-y-1 mb-10 items-center;
 
     .irelia-page-header__inner {
@@ -13,8 +18,19 @@
         @apply text-neutral-400;
       }
     }
+  }
 
-    .irelia-page-header__action-buttons {
+  .irelia-page-header--split-screen {
+    @apply mb-5;
+
+    .irelia-page-header__inner {
+      h1 {
+        @apply text-2xl font-bold mb-2 text-irelia-primary;
+      }
+
+      p {
+        @apply text-neutral-400;
+      }
     }
   }
 }
