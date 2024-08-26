@@ -1,25 +1,47 @@
 # Irelia
-Short description and motivation.
+Irelia view components for Ruby on Rails.
 
-## Usage
-How to use my plugin.
+## Documentation
+This project is still in an early stage. Documentation will be available soon.
 
 ## Installation
-Add this line to your application's Gemfile:
+
+#### 1. Add this line to your application's Gemfile:
 
 ```ruby
 gem "irelia"
 ```
+Run `bundle install` to install the dependencies
 
-And then execute:
-```bash
-$ bundle
+#### 2. Add the `irelia_head` method inside the `<head>` tags in your application layout.
+
+This is a helper method that will inject the Irelia stylesheets and javascripts into the head tag. It includes the Irelia CSS and JS files, as well as **Font Awesome** for icons and the **Poppins** Google font. 
+
+```html
+<!-- file: app/views/application.html.erb -->
+<head>
+  <%= irelia_head %>
+  <!-- Load custom CSS after "irelia_head" to -->
+</head>
 ```
 
-Or install it yourself as:
-```bash
-$ gem install irelia
+#### 3. Load javascripts with importmap
+
+Pin the Irelia javascripts in your `importmap.rb` config.
+
+```ruby
+pin "irelia", to: "irelia.js"
 ```
+
+Add the Irelia `registerIreliaControllers` to your `controllers.js` file.
+
+```javascript
+// file: app/javascripts/controllers/index.js
+import { registerIreliaControllers } from "irelia";
+registerIreliaControllers(application);
+```
+
+Restart your application and you should be good to go!
 
 ## Contributing
 Contribution directions go here.
