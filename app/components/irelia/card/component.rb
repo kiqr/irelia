@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Irelia::Card::Component < Irelia::Component
+  include Irelia::Options::Width
+
   option :padding, default: -> { true }, optional: true
 
   def variants

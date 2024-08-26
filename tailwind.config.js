@@ -27,19 +27,22 @@ module.exports = {
       borderColor: {
         DEFAULT: "var(--color-border)",
       },
-      container: {
-        center: true,
-        screens: {
-          DEFAULT: "1200px",
-        },
-        padding: {
-          DEFAULT: "1.5em",
-        },
-      },
       typography: {
         DEFAULT: {
           css: {
+            color: "var(--irelia-colors-text)",
             maxWidth: "100%",
+            "a, .button_to button": {
+              color: "var(--irelia-colors-primary)",
+              "text-decoration": "none",
+              "font-weight": "bold",
+              "&:hover": {
+                color: "var(--irelia-colors-primary-hover)",
+              },
+            },
+            "h1, h2, h3, h4, h5, h6": {
+              color: "var(--irelia-colors-primary)",
+            },
           },
         },
       },
@@ -51,6 +54,9 @@ module.exports = {
         html: { fontSize: "13.5px" },
       });
     }),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/container-queries"),
   ],
   safelist: ["irelia-form"],
 };

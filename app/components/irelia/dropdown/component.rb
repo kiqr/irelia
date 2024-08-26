@@ -33,6 +33,7 @@ class Irelia::Dropdown::Component < Irelia::Component
     def initialize(**options)
       options[:html_options] ||= {}
       options[:html_options]["data"] = { "action": "irelia-dropdown#toggle click@window->irelia-dropdown#hide" }
+      options[:html_options]["style"] = "display:block;width:100%"
       super(**options)
     end
 

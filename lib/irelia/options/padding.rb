@@ -3,11 +3,11 @@ module Irelia
     module Padding
       def self.included(base)
         base.class_eval do
-          option :padding, default: -> { :none }, in: [ :none, :sm, :md, :lg ]
-          option :padding_top, default: -> { :none }, in: [ :none, :sm, :md, :lg ]
-          option :padding_right, default: -> { :none }, in: [ :none, :sm, :md, :lg ]
-          option :padding_bottom, default: -> { :none }, in: [ :none, :sm, :md, :lg ]
-          option :padding_left, default: -> { :none }, in: [ :none, :sm, :md, :lg ]
+          option :padding, default: -> { nil }, in: [ :none, :sm, :md, :lg ]
+          option :padding_top, default: -> { nil }, in: [ :none, :sm, :md, :lg ]
+          option :padding_right, default: -> { nil }, in: [ :none, :sm, :md, :lg ]
+          option :padding_bottom, default: -> { nil }, in: [ :none, :sm, :md, :lg ]
+          option :padding_left, default: -> { nil }, in: [ :none, :sm, :md, :lg ]
 
           after_initialize do
             add_css_classes(

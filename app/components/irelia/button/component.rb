@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Irelia::Button::Component < Irelia::Component
+  include Irelia::Options::Width
+
   option :url, default: -> { nil }
   option :type, default: -> { :button }, in: [ :button, :submit, :reset ]
   option :size, default: -> { :md }, in: [ :xs, :sm, :md, :lg, :xl ]

@@ -1,7 +1,10 @@
 <%= content_tag :section, html_options do %>
-  <div class="irelia-navbar__inner">
+  <%= render(Irelia::Container::Component.new(
+    size: full_width ? :full_width : :xl,
+    center: true,
+    html_options: { class: "irelia-navbar__inner" })) do %>
     <% components.each do |component| %>
       <%= component %>
     <% end %>
-  </div>
+  <% end %>
 <% end %>

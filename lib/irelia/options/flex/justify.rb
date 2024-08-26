@@ -1,16 +1,21 @@
 module Irelia
   module Options
     module Flex
-      module Direction
+      module Justify
         def self.included(base)
           base.class_eval do
-            option :direction, default: -> { :row }, in: [ :row, :column ]
+            option :justify, default: -> { nil }, in: %i[start center between around evenly stretch end]
 
             after_initialize do
               add_css_classes(
                 class_names(
-                  "irelia-flex--row": direction == :row,
-                  "irelia-flex--column": direction == :column,
+                  "irelia-justify-start": justify == :start,
+                  "irelia-justify-center": justify == :center,
+                  "irelia-justify-between": justify == :between,
+                  "irelia-justify-end": justify == :end,
+                  "irelia-justify-around": justify == :around,
+                  "irelia-justify-evenly": justify == :evenly,
+                  "irelia-justify-stretch": justify == :stretch
                 )
               )
             end

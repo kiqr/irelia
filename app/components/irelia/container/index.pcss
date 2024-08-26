@@ -1,12 +1,45 @@
 @layer components {
   .irelia-container {
-    @apply container p-0 m-0 mx-auto;
+    @apply px-10 m-0;
+
+    &.irelia-container--center {
+      @apply mx-auto;
+    }
   }
 
   .irelia-app-shell .irelia-container {
-    @apply max-w-full px-10;
+    @apply px-0;
   }
 
-  .irelia-container--default {
+  .irelia-container--size-full-width {
+    @apply w-[100%];
+  }
+
+  .irelia-container--size-xxl {
+    @apply max-w-[1536px];
+  }
+
+  .irelia-container--size-xl {
+    @apply max-w-[1280px];
+  }
+
+  .irelia-container--size-lg {
+    @apply max-w-[1024px];
+  }
+
+  .irelia-container--size-md {
+    @apply max-w-[768px];
+  }
+
+  .irelia-container--size-sm {
+    @apply max-w-[640px];
+  }
+
+  .irelia-container--size-xs {
+    @apply max-w-[448px];
+  }
+
+  .irelia-container--size-xxs {
+    @apply max-w-[320px];
   }
 }

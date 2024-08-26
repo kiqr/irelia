@@ -4,6 +4,7 @@ module Irelia
 
     IRELIA_COMPONENTS_HELPERS = {
       account_switcher: "Irelia::AccountSwitcher::Component",
+      avatar: "Irelia::Avatar::Component",
       app_shell: "Irelia::AppShell::Component",
       button: "Irelia::Button::Component",
       breadcrumbs: "Irelia::Breadcrumbs::Component",
@@ -13,6 +14,7 @@ module Irelia
       divider: "Irelia::Divider::Component",
       dropdown: "Irelia::Dropdown::Component",
       flex: "Irelia::Flex::Component",
+      html: "Irelia::Html::Component",
       icon: "Irelia::Icon::Component",
       modal: "Irelia::Modal::Component",
       notification: "Irelia::Notification::Component",
