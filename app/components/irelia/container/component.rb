@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class Irelia::Container::Component < Irelia::Component
+  include Irelia::Options::Padding
+
   option :center, default: -> { false }, in: %i[true false]
   option :size, default: -> { :full_width }, in: %i[full_width xxs xs sm md lg xl]
 
