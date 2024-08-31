@@ -1,0 +1,23 @@
+@layer components {
+  .irelia-empty-collection {
+    @apply flex py-10 px-12 gap-32;
+  }
+
+  .irelia-empty-collection--content {
+    @apply flex flex-col w-2/3 justify-center gap-y-5;
+    h1 {
+      @apply text-2xl font-bold text-irelia-primary;
+    }
+    p {
+      @apply text-base;
+    }
+  }
+
+  .irelia-empty-collection--image-container {
+    @apply flex flex-shrink text-center items-center justify-center w-1/3;
+  }
+
+  .irelia-empty-collection--actions {
+    @apply flex gap-x-2;
+  }
+}

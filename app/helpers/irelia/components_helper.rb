@@ -13,6 +13,7 @@ module Irelia
       div: "Irelia::Div::Component",
       divider: "Irelia::Divider::Component",
       dropdown: "Irelia::Dropdown::Component",
+      empty_collection: "Irelia::EmptyCollection::Component",
       flex: "Irelia::Flex::Component",
       html: "Irelia::Html::Component",
       icon: "Irelia::Icon::Component",
