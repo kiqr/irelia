@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    irelia (0.1.0)
+    irelia (0.2.0)
       dry-initializer (~> 3.1)
       lookbook (~> 2.3.1)
       view_component (~> 3.12)
