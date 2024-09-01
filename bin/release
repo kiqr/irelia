@@ -5,10 +5,10 @@ VERSION=$1
 printf "module Irelia\n  VERSION = \"$VERSION\"\nend\n" > ./lib/irelia/version.rb
 bundle
 git add Gemfile.lock lib/irelia/version.rb
-# git commit -m "Bump version for $VERSION"
-# git push
-# git tag v$VERSION
-# git push --tags
-# gem build stimulus-rails.gemspec
-# gem push "stimulus-rails-$VERSION.gem" --host https://rubygems.org
-# rm "stimulus-rails-$VERSION.gem"
+git commit -m "Bump version for $VERSION"
+git push
+git tag v$VERSION
+git push --tags
+gem build irelia.gemspec
+gem push "irelia-$VERSION.gem" --host https://rubygems.org
+rm "irelia-$VERSION.gem"
