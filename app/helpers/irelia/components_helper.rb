@@ -9,11 +9,12 @@ module Irelia
       button: "Irelia::Button::Component",
       breadcrumbs: "Irelia::Breadcrumbs::Component",
       card: "Irelia::Card::Component",
+      call_to_action: "Irelia::CallToAction::Component",
       container: "Irelia::Container::Component",
       div: "Irelia::Div::Component",
       divider: "Irelia::Divider::Component",
       dropdown: "Irelia::Dropdown::Component",
-      empty_collection: "Irelia::EmptyCollection::Component",
+      empty_collection: "Irelia::CallToAction::Component", # @deprecated
       flex: "Irelia::Flex::Component",
       html: "Irelia::Html::Component",
       icon: "Irelia::Icon::Component",

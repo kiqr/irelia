@@ -1,6 +1,6 @@
 <%= render(Irelia::Card::Component.new(padding: false)) do |card| %>
   <%= content_tag :div, html_options do %>
-    <div class="irelia-empty-collection--content">
+    <div class="irelia-call-to-action--content">
       <h1><%= title %></h1>
       <p><%= description %></p>
       <% if buttons %>
@@ -11,7 +11,7 @@
         <% end %>
       <% end %>
     </div>
-    <div class="irelia-empty-collection--image-container">
+    <div class="irelia-call-to-action--image-container">
       <img width="200" height="200" src="https://rankzon.com/assets/undraw/rocket_launch-87eb4798f5e680120a6fe78d908e9df35bf6cc2e0282f35b258ec03a48f159b2.svg">
     </div>
   <% end %>

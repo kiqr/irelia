@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Irelia::EmptyCollection::Component < Irelia::Component
+class Irelia::CallToAction::Component < Irelia::Component
   option :title, default: -> { nil }
   option :description, default: -> { nil }
 
@@ -8,8 +8,8 @@ class Irelia::EmptyCollection::Component < Irelia::Component
 
   def variants
     class_names(
-      "irelia-empty-collection",
-      "irelia-empty-collection--default": variant == :default
+      "irelia-call-to-action",
+      "irelia-call-to-action--default": variant == :default
     )
   end
 end
