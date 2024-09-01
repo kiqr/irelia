@@ -7,7 +7,7 @@ gemspec
 
 gem "puma"
 gem "rails", RAILS_VERSION
-gem "sqlite3", "~> 1.4"
+gem "sqlite3", ">= 1.4"
 gem "sprockets-rails"
 gem "listen"
 gem "actioncable"
