@@ -25,6 +25,20 @@ module Irelia
     def variants
     end
 
+    def option_includes?(option_name, value)
+      option_value = send(option_name)
+      case option_value
+      when true
+        true
+      when String, Symbol
+        option_value.to_sym == value
+      when Array
+        option_value.map(&:to_sym).include?(value)
+      else
+        false
+      end
+    end
+
     class << self
       def after_initialize(method_name = nil, &block)
         @after_initialize_hooks ||= []

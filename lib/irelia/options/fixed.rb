@@ -8,14 +8,15 @@ module Irelia
           after_initialize do
             add_css_classes(
               class_names(
-                "irelia-fixed-top": fixed == :top,
-                "irelia-fixed-top-right": fixed == :top_right,
-                "irelia-fixed-right": fixed == :right,
-                "irelia-fixed-bottom-right": fixed == :bottom_right,
-                "irelia-fixed-bottom": fixed == :bottom,
-                "irelia-fixed-bottom-left": fixed == :bottom_left,
-                "irelia-fixed-left": fixed == :left,
-                "irelia-fixed-top-left": fixed == :top_left
+                "irelia-fixed": !!fixed,
+                "irelia-fixed-top": option_includes?(:fixed, :top),
+                "irelia-fixed-top-right": option_includes?(:fixed, :top_right),
+                "irelia-fixed-right": option_includes?(:fixed, :right),
+                "irelia-fixed-bottom-right": option_includes?(:fixed, :bottom_right),
+                "irelia-fixed-bottom": option_includes?(:fixed, :bottom),
+                "irelia-fixed-bottom-left": option_includes?(:fixed, :bottom_left),
+                "irelia-fixed-left": option_includes?(:fixed, :left),
+                "irelia-fixed-top-left": option_includes?(:fixed, :top_left)
               )
             )
           end
