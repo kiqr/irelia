@@ -7,23 +7,13 @@
   .irelia-page-header--default {
     @apply flex space-y-1 mb-10 items-center;
 
+    &.irelia-page-header--no-margin {
+      @apply mb-0;
+    }
+
     .irelia-page-header__inner {
       @apply flex-1;
 
-      h1 {
-        @apply text-2xl font-bold text-irelia-primary;
-      }
-
-      p {
-        @apply text-neutral-400;
-      }
-    }
-  }
-
-  .irelia-page-header--split-screen {
-    @apply mb-5;
-
-    .irelia-page-header__inner {
       h1 {
         @apply text-2xl font-bold mb-2 text-irelia-primary;
       }

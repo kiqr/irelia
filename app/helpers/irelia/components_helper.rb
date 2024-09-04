@@ -27,8 +27,7 @@ module Irelia
       navbar: "Irelia::Navbar::Component",
       navbar_section: "Irelia::Navbar::Section::Component",
       navbar_separator: "Irelia::Navbar::Separator::Component",
-      navigation: "Irelia::Navigation::Component",
-      split_screen: "Irelia::SplitScreen::Component"
+      navigation: "Irelia::Navigation::Component"
     }.freeze
 
     IRELIA_COMPONENTS_HELPERS.each do |name, component|
