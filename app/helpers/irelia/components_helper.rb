@@ -21,6 +21,7 @@ module Irelia
       modal: "Irelia::Modal::Component",
       notification: "Irelia::Notification::Component",
       page_header: "Irelia::PageHeader::Component",
+      scroll_area: "Irelia::ScrollArea::Component",
       sidebar: "Irelia::Sidebar::Component",
       stack: "Irelia::Stack::Component",
       table: "Irelia::Table::Component",
