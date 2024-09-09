@@ -12,7 +12,7 @@ gem "sprockets-rails"
 gem "listen"
 gem "actioncable"
 
-gem "pg", "~> 1.1"
+gem "pg", "~> 1.5"
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
