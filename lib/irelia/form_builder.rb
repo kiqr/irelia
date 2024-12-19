@@ -10,6 +10,10 @@ module Irelia
       render_component(:text_field, method, options: options, html_options: html_options, &block)
     end
 
+    def text_area(method, html_options = {}, &block)
+      render_component(:text_area, method, options: options, html_options: html_options, &block)
+    end
+
     def password_field(method, html_options = {}, &block)
       render_component(:password_field, method, options: options, html_options: html_options, &block)
     end
